@@ -1,0 +1,117 @@
+.comparison-section {
+    background-color: var(--color-background-secondary);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.comparison-heading h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--color-text);
+}
+
+.comparison-heading p {
+    font-family: var(--font-body);
+    color: var(--color-text-secondary);
+    margin-top: 0.5rem;
+}
+
+.comparison-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.comparison-card {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.comparison-card img {
+    width: 80%;
+    height: auto;
+    object-fit: contain;
+}
+
+.comparison-card h3 {
+    font-family: var(--font-heading);
+    color: var(--color-text);
+    margin-top: 1rem;
+}
+
+.comparison-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    font-family: var(--font-body);
+    color: var(--color-text-secondary);
+}
+
+.comparison-card li {
+    margin-bottom: 0.5rem;
+}
+
+/* 🔥 Button styles */
+.comparison-button {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--color-accent);
+    color: white;
+    border: none;
+    border-radius: 999px;
+    font-family: var(--font-body);
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.comparison-button:hover {
+    background-color: #2b5a75;
+}
+
+/* Optional secondary button (for chunk) */
+.comparison-button.secondary {
+    background-color: transparent;
+    border: 2px solid var(--color-accent);
+    color: var(--color-accent);
+}
+
+.comparison-button.secondary:hover {
+    background-color: var(--color-accent);
+    color: white;
+}
+
+/* Desktop layout */
+@media (min-width: 768px) {
+    .comparison-cards {
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+        /* 🛠 Make cards equal height */
+    }
+}
+
+/* Update card style */
+.comparison-card {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* 🛠 Push button to bottom */
+    align-items: center;
+    flex: 1;
+    /* 🛠 Let them grow equally */
+    min-height: 500px;
+    /* Optional, so not too small */
+}

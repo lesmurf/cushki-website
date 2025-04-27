@@ -1,0 +1,71 @@
+/* ReviewsSection.css */
+
+.reviews-section {
+    background-color: var(--color-background-secondary);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.reviews-heading h2 {
+    font-size: 2rem;
+    font-family: var(--font-heading);
+    color: var(--color-text);
+    margin-bottom: 0.5rem;
+}
+
+.reviews-heading p {
+    font-size: 1.1rem;
+    font-family: var(--font-body);
+    color: var(--color-text-secondary);
+    margin-bottom: 3rem;
+}
+
+.reviews-slider .slick-slide {
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.review-card {
+    background: #e0e0e0;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin: 0;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    position: relative;
+}
+
+.review-card h3 {
+    font-size: 1.2rem;
+    font-family: var(--font-heading);
+    margin-bottom: 0.5rem;
+    color: var(--color-text);
+}
+
+.review-card p {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.reviewer {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--color-text);
+}
+
+.verified {
+    font-size: 0.8rem;
+    color: var(--color-text-secondary);
+}
+
+.stars {
+    font-size: 1.2rem;
+    color: gold;
+    margin-bottom: 1rem;
+}

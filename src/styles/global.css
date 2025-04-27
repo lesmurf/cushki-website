@@ -1,0 +1,53 @@
+/* global.css */
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GLOBAL VARIABLES */
+:root {
+    --color-background: #f1ebdf;
+    --color-background-secondary: #ECE8E3;
+    --color-primary: #A8BDB0;
+    --color-secondary: #A8BDB0;
+    --color-text: #333333;
+    --color-text-secondary: #7A7364;
+    --color-accent: #3A6D8C;
+    --color-highlight: #FFF4C1;
+
+    --font-heading: 'Poppins', 'Nunito', sans-serif;
+    --font-body: 'Inter', 'Work Sans', sans-serif;
+}
+
+/* GLOBAL STYLES */
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    color: var(--color-text);
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: var(--color-accent);
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--color-primary);
+}
