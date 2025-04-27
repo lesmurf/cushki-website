@@ -1,28 +1,42 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import BadgesSection from './components/BadgesSection';
-import ComparisonSection from './components/ComparisonSection'; // 👈 New
-import StorySection from './components/StorySection'; // 👈 import it
+import ComparisonSection from './components/ComparisonSection';
+import StorySection from './components/StorySection';
 import ReasonsSection from './components/ReasonsSection';
 import ReviewsSection from './components/ReviewsSection';
-import Footer from './components/Footer'; // ✅ <-- ADD Footer here
+import Footer from './components/Footer';
 
+import ProductPage from './pages/ProductPage'; // 👈 Add your ProductPage here
 
 import './styles/global.css';
 
-function App() {
+function HomePage() {
   return (
     <>
-      <Navbar />
       <Hero />
       <BadgesSection />
-      <ComparisonSection /> 
-      <StorySection /> {/* 👈 Add it here */}
-      <ReasonsSection /> {/* 👈 Add this */}
+      <ComparisonSection />
+      <StorySection />
+      <ReasonsSection />
       <ReviewsSection />
-      <Footer /> {/* ✅ Footer appears at the bottom */}
     </>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/shop-classic" element={<ProductPage />} />
+      </Routes>
+      <Footer />
+    </Router>
   );
 }
 

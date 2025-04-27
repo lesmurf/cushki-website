@@ -1,0 +1,227 @@
+.product-page {
+    padding: 2rem;
+    background-color: var(--color-background);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.product-top {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.product-image {
+    flex: 0.6;
+    /* <-- BIGGER IMAGE */
+    max-width: 700px;
+    width: 100%;
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 1rem;
+}
+
+.product-info {
+    flex: 0.4;
+    /* <-- SMALLER TEXT SIDE */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.fabric-filter {
+    margin-bottom: 0rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.fabric-filter button {
+    margin: 0;
+    padding: 0.5rem 1rem;
+    background: transparent;
+    border: 1px solid var(--color-text);
+    border-radius: 9999px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.fabric-filter button.active {
+    background-color: var(--color-text);
+    color: white;
+}
+
+.selected-color-name {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: var(--color-text);
+    text-align: left;
+}
+
+.color-swatches {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+}
+
+.swatch {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    cursor: pointer;
+}
+
+.swatch.active {
+    border: 3px solid var(--color-accent);
+}
+
+.add-to-cart,
+.build-box {
+    padding: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.add-to-cart {
+    background-color: var(--color-accent);
+    color: white;
+    border: none;
+    border-radius: 2.5rem;
+}
+
+.build-box {
+    background-color: #FFD6C0;
+    border: none;
+    color: var(--color-text);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.build-box-link {
+    color: var(--color-text);
+    text-decoration: underline;
+    font-weight: bold;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    display: inline-block;
+}
+
+.build-box:hover {
+    background-color: #ffbb9e;
+    color: var(--color-text);
+}
+
+.free-shipping {
+    background-color: var(--color-secondary);
+    border: none;
+    color: white;
+    padding: 1rem;
+    border-radius: 0.2rem;
+    text-align: center;
+    font-weight: bold;
+    font-family: var(--font-body);
+    font-size: 1rem;
+}
+
+.returns-link {
+    color: white;
+    /* Match the text */
+    text-decoration: underline;
+}
+
+.returns-link:hover {
+    color: var(--color-accent);
+    /* Optional: change color on hover */
+}
+
+.accordions {
+    margin-top: 2rem;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #ddd;
+    padding: 1rem 0;
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.accordion-content {
+    margin-top: 0.5rem;
+    color: var(--color-text-secondary);
+}
+
+/* 📱 MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+    .product-top {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-image {
+        flex: none;
+        max-width: 90%;
+    }
+
+    .product-info {
+        flex: none;
+        width: 100%;
+        padding: 0 1rem;
+        gap: 1rem;
+    }
+
+    .price {
+        font-size: 1.8rem;
+    }
+
+    .fabric-filter button {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .add-to-cart,
+    .build-box,
+    .free-shipping {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+
+    .accordion-header {
+        font-size: 1rem;
+    }
+
+    .accordion-content p {
+        font-size: 0.9rem;
+    }
+
+    .selected-color-name {
+        text-align: center;
+    }
+}
