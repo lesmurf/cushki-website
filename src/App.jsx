@@ -97,6 +97,11 @@ function App() {
     const cartUrl = `https://m1xmy8-2u.myshopify.com/cart/${cartItems
   .map(item => `${item.variantId}:${item.quantity}`)
   .join(',')}`;
+  
+  // 🔍 Add these two logs to debug
+  console.log("🛒 Cart URL:", cartUrl);
+  console.log("🧾 Cart Items:", cartItems);
+  
     window.location.href = cartUrl;
   };
 
