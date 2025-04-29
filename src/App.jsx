@@ -93,11 +93,17 @@ function App() {
     });
   };
 
-    const cartUrl = `https://m1xmy8-2u.myshopify.com/cart/${cartItems
-      .map(item => `${item.variantId}:${item.quantity}`)
-      .join(',')}`;
-    window.location.replace(cartUrl);
+    const handleCheckout = () => {
+      console.log("🔔 handleCheckout triggered");
 
+      const cartUrl = `https://m1xmy8-2u.myshopify.com/cart/${cartItems
+        .map(item => `${item.variantId}:${item.quantity}`)
+        .join(',')}`;
+
+      console.log("🛒 Cart URL:", cartUrl);
+
+      window.location.replace(cartUrl); // ✅ Hard redirect to Shopify cart
+    };
 
   // ✅ Password Gate check AFTER all hooks
   if (isPasswordProtected && !isUnlocked) {
