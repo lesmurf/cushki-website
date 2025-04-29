@@ -102,8 +102,10 @@ function App() {
 
       console.log("🛒 Cart URL:", cartUrl);
 
-      window.location.replace(cartUrl); // ✅ Hard redirect to Shopify cart
+      // ✅ Force a real, full-page redirect — not internal routing
+      window.location.href = cartUrl;
     };
+
 
   // ✅ Password Gate check AFTER all hooks
   if (isPasswordProtected && !isUnlocked) {

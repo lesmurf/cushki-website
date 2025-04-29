@@ -48,7 +48,21 @@ const MiniCart = ({ cartItems, onRemove, onCheckout, onClose, onUpdateQuantity }
             <span>Total:</span>
             <span>${total}</span>
           </div>
-            <button type="button" onClick={onCheckout}>Checkout</button>
+            <button
+              className="checkout-btn"
+              onClick={() => {
+                const cartUrl = `https://m1xmy8-2u.myshopify.com/cart/${cartItems
+                  .map(item => `${item.variantId}:${item.quantity}`)
+                  .join(',')}`;
+                
+                console.log("➡️ Redirecting to:", cartUrl);
+
+                // ✅ This is what forces the actual redirect (DO NOT use React Router here)
+                window.location.href = cartUrl;
+              }}
+            >
+              Checkout
+            </button>
         </div>
 
       </div>
