@@ -94,16 +94,18 @@ function App() {
   };
 
   const handleCheckout = () => {
+    console.log("🔔 handleCheckout triggered");
+
     const cartUrl = `https://m1xmy8-2u.myshopify.com/cart/${cartItems
-  .map(item => `${item.variantId}:${item.quantity}`)
-  .join(',')}`;
-  
-  // 🔍 Add these two logs to debug
-  console.log("🛒 Cart URL:", cartUrl);
-  console.log("🧾 Cart Items:", cartItems);
-  
-    window.location.href = cartUrl;
+      .map(item => `${item.variantId}:${item.quantity}`)
+      .join(',')}`;
+
+    console.log("🧾 Cart Items:", cartItems);
+    console.log("➡️ FINAL cartUrl:", cartUrl); // ✅ ADD THIS
+
+    window.location.replace(cartUrl); // ✅ HARD REDIRECT
   };
+
 
   // ✅ Password Gate check AFTER all hooks
   if (isPasswordProtected && !isUnlocked) {
