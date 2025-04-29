@@ -93,14 +93,17 @@ function App() {
     });
   };
 
-  const handleCheckout = () => {
-    const cartUrl = `https://cushkisg.com/cart/${cartItems
-      .map(item => `${item.variantId}:${item.quantity}`)
-      .join(',')}`;
-    
-    console.log("🛒 Redirecting to:", cartUrl);
-    window.location.href = cartUrl;
-  };
+    const handleCheckout = () => {
+      console.log("🔔 Checkout triggered!");
+
+      const cartUrl = `https://m1xmy8-2u.myshopify.com/cart/${cartItems
+        .map(item => `${item.variantId}:${item.quantity}`)
+        .join(',')}`;
+
+      console.log("➡️ Redirecting to:", cartUrl);
+      window.location.href = cartUrl;
+    };
+
 
 
 
