@@ -2,7 +2,7 @@
 import React from 'react';
 import '../styles/InfoPages.css'; // optional: reuse 1 css file for all info pages
 
-const ShippingReturnsPage = () => {
+const ShippingPage = () => {
   return (
     <div className="info-page">
       <h1>Shipping & Returns</h1>
@@ -11,4 +11,4 @@ const ShippingReturnsPage = () => {
   );
 };
 
-export default ShippingReturnsPage;
+export default ShippingPage;

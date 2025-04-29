@@ -25,10 +25,14 @@ import BuildsPage from './pages/BuildsPage'
 import OurFabricPage from './pages/OurFabricPage';
 
 import FAQPage from './pages/FAQPage';
+
+import ContactPage from './pages/ContactPage';
+import ShippingPage from './pages/ShippingPage';
+import ReturnsPage from './pages/ReturnsPage';
 import TermsPage from './pages/TermsPage';
-import ShippingReturnsPage from './pages/ShippingReturnsPage';
-import WarrantyPage from './pages/WarrantyPage';
-import CarePage from './pages/CarePage';
+import PrivacyPage from './pages/PrivacyPage';
+import SafetyPage from './pages/SafetyPage';
+
 
 import './styles/global.css';
 
@@ -119,10 +123,15 @@ function App() {
           <Route path="/our-fabric" element={<OurFabricPage />} />
 
           <Route path="/faq" element={<FAQPage />} />
+
+
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/shipping" element={<ShippingPage />} />
+          <Route path="/returns" element={<ReturnsPage />} />
           <Route path="/terms" element={<TermsPage />} />
-          <Route path="/shipping-returns" element={<ShippingReturnsPage />} />
-          <Route path="/warranty" element={<WarrantyPage />} />
-          <Route path="/care" element={<CarePage />} />
+          <Route path="/privacy" element={<PrivacyPage />} />
+          <Route path="/safety" element={<SafetyPage />} />
+
         </Routes>
       </div>
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/Footer.css';
 import { FaInstagram, FaTiktok, FaShoppingCart } from 'react-icons/fa'; // 👈 install react-icons if not yet
 
@@ -32,15 +33,15 @@ const Footer = () => {
           <div className="footer-column">
             <h4>CUSTOMER CARE</h4>
             <a href="/faq?tab=care">FAQ</a>
-            <a href="#">Contact Us</a>
-            <a href="#">Shipping Info</a>
-            <a href="#">Returns & Warranty</a>
+            <Link to="/contact">Contact Us</Link>
+            <Link to="/shipping">Shipping Info</Link>
+            <Link to="/returns">Returns & Warranty</Link>
           </div>
           <div className="footer-column">
             <h4>OUR POLICIES</h4>
-            <a href="#">Terms & Conditions</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Safety Disclaimer</a>
+            <Link to="/terms">Terms & Conditions</Link>
+            <Link to="/privacy">Privacy Policy</Link>
+            <Link to="/safety">Safety Disclaimer</Link>
           </div>
         </div>
 
