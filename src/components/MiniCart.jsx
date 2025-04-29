@@ -48,7 +48,7 @@ const MiniCart = ({ cartItems, onRemove, onCheckout, onClose, onUpdateQuantity }
             <span>Total:</span>
             <span>${total}</span>
           </div>
-            <button onClick={handleCheckout}>Checkout</button>
+            <button type="button" onClick={onCheckout}>Checkout</button>
         </div>
 
       </div>

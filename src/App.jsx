@@ -94,7 +94,7 @@ function App() {
   };
 
     const handleCheckout = () => {
-      console.log("🔔 handleCheckout triggered");
+      console.log("🧨 Checkout was actually triggered!");
 
       const cartUrl = `https://m1xmy8-2u.myshopify.com/cart/${cartItems
         .map(item => `${item.variantId}:${item.quantity}`)
