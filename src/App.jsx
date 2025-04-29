@@ -105,9 +105,6 @@ function App() {
       window.location.href = cartUrl; // ✅ simple and clean
     };
 
-
-
-
   // ✅ Password Gate check AFTER all hooks
   if (isPasswordProtected && !isUnlocked) {
     return <PasswordGate unlockSite={unlockSite} />;
