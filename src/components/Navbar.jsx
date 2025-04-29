@@ -64,6 +64,7 @@ const Navbar = ({ cartCount, onCartClick }) => {
         { path: "/faq?tab=shipping", label: "FAQ Shipping" },
         { path: "/faq?tab=returns", label: "FAQ Returns & Warranty" },
         { path: "/faq?tab=safety", label: "FAQ Use & Safety" },
+        { path: "/contact", label: "Contact Us" },
       ],
     },
   ];

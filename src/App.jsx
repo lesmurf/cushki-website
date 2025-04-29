@@ -94,7 +94,9 @@ function App() {
   };
 
   const handleCheckout = () => {
-    const cartUrl = `https://m1xmy8-2u.myshopify.com/cart/${cartItems.map(item => `${item.variantId}:${item.quantity}`).join(',')}`;
+    const cartUrl = `https://m1xmy8-2u.myshopify.com/cart/${cartItems
+  .map(item => `${item.variantId}:${item.quantity}`)
+  .join(',')}`;
     window.location.href = cartUrl;
   };
 
