@@ -93,18 +93,20 @@ function App() {
     });
   };
 
-  const handleCheckout = () => {
-    console.log("🔔 handleCheckout triggered");
+    const handleCheckout = () => {
+      console.log("🔔 handleCheckout triggered");
 
-    const cartUrl = `https://m1xmy8-2u.myshopify.com/cart/${cartItems
-      .map(item => `${item.variantId}:${item.quantity}`)
-      .join(',')}`;
+      const cartUrl = `https://m1xmy8-2u.myshopify.com/cart/${cartItems
+        .map(item => `${item.variantId}:${item.quantity}`)
+        .join(',')}`;
 
-    console.log("🧾 Cart Items:", cartItems);
-    console.log("➡️ FINAL cartUrl:", cartUrl); // ✅ ADD THIS
+      console.log("🧾 Cart Items:", cartItems);
+      console.log("➡️ FINAL cartUrl:", cartUrl);
 
-    window.location.replace(cartUrl); // ✅ HARD REDIRECT
-  };
+      // Force open in new tab for safety check
+      window.open(cartUrl, "_blank");
+    };
+
 
 
   // ✅ Password Gate check AFTER all hooks
