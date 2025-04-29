@@ -1,0 +1,37 @@
+.builds-page {
+    padding: 2rem;
+    background-color: #f8f5ee;
+    color: #2c2c2c;
+    text-align: center;
+}
+
+.builds-heading h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.builds-heading p {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.builds-subtext p {
+    max-width: 700px;
+    margin: 0 auto 1rem;
+    font-size: 1rem;
+    color: #444;
+}
+
+.builds-gallery {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.builds-gallery img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+}

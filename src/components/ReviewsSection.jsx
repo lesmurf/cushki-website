@@ -8,7 +8,7 @@ const reviews = [
   {
     name: "jasmine s.",
     title: "Best purchase",
-    review: "My boys love their nugget couch since we’ve unpacked it! Best purchase ever. Great quality and love that the covers are machine washable.",
+    review: "My boys love their nugget couch since we've unpacked it! Best purchase ever. Great quality and love that the covers are machine washable.",
     rating: 5,
   },
   {

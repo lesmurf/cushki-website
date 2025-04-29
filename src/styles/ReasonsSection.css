@@ -95,7 +95,6 @@
     color: var(--color-text-secondary);
 }
 
-/* Optional: change text color slightly when hovered */
 .reason-card:hover h3,
 .reason-card:hover p {
     color: white;
@@ -109,11 +108,8 @@
     position: relative;
     z-index: 3;
     opacity: 1;
-    /* 👈 Always visible */
 }
 
-/* Optional: hide it when hover if you want */
 .reason-card:hover .reason-hover-hint {
     opacity: 0;
-    /* 👈 optional: disappear when hover */
 }

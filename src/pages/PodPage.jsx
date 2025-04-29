@@ -1,40 +1,39 @@
-// ProductPage.jsx
+// PodPage.jsx
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/ProductPage.css';
+import '../styles/ProductPage.css'; 
 import ProductFeatures from "../components/ProductFeatures";
 
-
 const colors = {
-  Blue: {
-    hex: '#5CADFF',
+  Beige: {
+    hex: '#f5f5dc',
     image: '/assets/colorToImageProduct/blue1.png',
-    name: 'Skywhisper',
-    description: 'A serene, dreamy blue in double-brushed microsuede that brings calm and joy to any space',
-    variantId: '50579798262080',
+    name: 'Sandstone',
+    description: 'A soft, neutral beige that feels cozy and grounding.',
+    variantId: '50582547366208',
     fabric: 'Double-brushed Microsuede'
   },
-  Grey: {
-    hex: '#A8A8A8',
-    image: '/assets/colorToImageProduct/grey1.png',
-    name: 'Stonecloud',
-    description: 'A versatile, modern grey in double-brushed microsuede that pairs effortlessly with any mood or style.',
-    variantId: '50579798393152',
+  Brown: {
+    hex: '#a0522d',
+    image: '/assets/colorToImageProduct/brown1.png',
+    name: 'Cocoacalm',
+    description: 'A warm, chocolatey brown for bold yet soothing vibes.',
+    variantId: '50582547398976',
     fabric: 'Double-brushed Microsuede'
   },
-  Pink: {
-    hex: '#FFC5D3',
-    image: '/assets/colorToImageProduct/yellow1.png',
-    name: 'Blushbeam',
-    description: 'A soft, warm blush pink in double-brushed microsuede made for sweet moments and cozy corners.',
-    variantId: '50579798327616',
+  Green: {
+    hex: '#8FBC8F',
+    image: '/assets/colorToImageProduct/green1.png',
+    name: 'Mossmelt',
+    description: 'A lush moss green that brings the outdoors inside.',
+    variantId: '50582547431744',
     fabric: 'Double-brushed Microsuede'
   },
 };
 
-const ProductPage = ({ addToCart }) => {
+const PodPage = ({ addToCart }) => {
   const [selectedFabric, setSelectedFabric] = useState('All');
-  const [selectedColor, setSelectedColor] = useState('Blue');
+  const [selectedColor, setSelectedColor] = useState('Beige'); // default color
 
   const allSwatches = Object.keys(colors);
 
@@ -44,7 +43,7 @@ const ProductPage = ({ addToCart }) => {
 
   const handleFabricChange = (fabric) => {
     setSelectedFabric(fabric);
-    const firstColor = fabric === 'All' ? allSwatches[0] : allSwatches.find(c => colors[c].fabric === fabric);
+    const firstColor = fabric === 'All' ? 'Beige' : allSwatches.find(c => colors[c].fabric === fabric);
     setSelectedColor(firstColor);
   };
 
@@ -54,8 +53,8 @@ const ProductPage = ({ addToCart }) => {
 
   const handleAddToCart = () => {
     addToCart({
-      title: 'The Cushki Classic',
-      price: 489,
+      title: 'The Cushki Pod',
+      price: 389,
       quantity: 1,
       image: colors[selectedColor].image,
       variantId: colors[selectedColor].variantId
@@ -64,6 +63,7 @@ const ProductPage = ({ addToCart }) => {
 
   return (
     <div className="product-page">
+      {/* Main Top Section */}
       <div className="product-top">
         <img
           src={colors[selectedColor].image}
@@ -71,8 +71,8 @@ const ProductPage = ({ addToCart }) => {
           className="product-image"
         />
         <div className="product-info">
-          <h1>The Cushki™ Classic</h1>
-          <p className="price">$489</p>
+          <h1>The Cushki Pod™</h1>
+          <p className="price">$389</p>
 
           {/* Fabric Filter */}
           <div className="fabric-filter">
@@ -106,12 +106,12 @@ const ProductPage = ({ addToCart }) => {
 
           {/* Add to Cart Button */}
           <button className="add-to-cart" onClick={handleAddToCart}>
-            Add to Cart - $489
+            Add to Cart - $389
           </button>
 
-          {/* Upsell Bundle Box */}
+          {/* Upsell Banner */}
           <div className="bundle-box">
-            Add <Link to="/Pod" className="build-box-link">The Cushki Pod™</Link> into your cart and use code <strong>"BIGBUNDLE"</strong> for 15% off!
+            Add <Link to="/shop-classic" className="build-box-link">The Cushki Classic</Link> into your cart and use code <strong>"BIGBUNDLE"</strong> for 15% off!
           </div>
 
           {/* Shipping Info */}
@@ -126,12 +126,11 @@ const ProductPage = ({ addToCart }) => {
 
       {/* Product Features */}
       <ProductFeatures />
-
     </div>
   );
 };
 
-export default ProductPage;
+export default PodPage;
 
 // Accordion component
 const Accordions = () => {

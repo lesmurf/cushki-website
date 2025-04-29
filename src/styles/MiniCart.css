@@ -19,6 +19,13 @@
     padding: 1rem;
 }
 
+.empty-cart {
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 1.1rem;
+    color: #555;
+}
+
 /* ✅ Proper header */
 .mini-cart-header {
     display: flex;
@@ -68,15 +75,19 @@
 }
 
 .quantity-controls button {
-    background: #eee;
+    width: 30px;
+    height: 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: #f0f0f0;
     border: none;
-    padding: 0.4rem 0.8rem;
-    font-size: 1rem;
     border-radius: 4px;
     cursor: pointer;
 }
 
 .quantity-controls span {
+    min-width: 24px;
+    text-align: center;
     font-size: 1rem;
 }
 
