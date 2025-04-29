@@ -8,13 +8,13 @@ const MiniCart = ({ cartItems, onRemove, onCheckout, onClose, onUpdateQuantity }
     <div className="mini-cart-overlay">
       <div className="mini-cart">
         
-        {/* ✅ Proper Header */}
+        {/* ✅ Header */}
         <div className="mini-cart-header">
           <h2>Your Cart ({cartItems.reduce((sum, item) => sum + item.quantity, 0)})</h2>
           <button className="close-cart" onClick={onClose}>✕</button>
         </div>
 
-        {/* ✅ Scrollable content */}
+        {/* ✅ Cart Items Content */}
         <div className="mini-cart-content">
           {cartItems.length === 0 ? (
             <p className="empty-cart">Your cart is empty!</p>
@@ -42,14 +42,20 @@ const MiniCart = ({ cartItems, onRemove, onCheckout, onClose, onUpdateQuantity }
           )}
         </div>
 
-        {/* ✅ Sticky Footer */}
-        <button className="checkout-btn" onClick={onCheckout}>
-          Checkout
-        </button>
+        {/* ✅ Footer */}
+        <div className="mini-cart-footer">
+          <div className="cart-total">
+            <span>Total:</span>
+            <span>${total.toFixed(2)}</span> {/* ✅ Show with 2 decimal places */}
+          </div>
+          <button className="checkout-btn" onClick={onCheckout}>
+            Checkout
+          </button>
+        </div>
+
       </div>
     </div>
   );
 };
 
 export default MiniCart;
-
