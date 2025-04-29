@@ -1,10 +1,24 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaShoppingCart } from 'react-icons/fa'; // ✅ Make sure react-icons is installed
+import { FaShoppingCart, FaBars, FaTimes } from 'react-icons/fa';
 import '../styles/Navbar.css';
 
 const Navbar = ({ cartCount, onCartClick }) => {
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeSubMenu, setActiveSubMenu] = useState(null);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+    setActiveDropdown(null);
+    setActiveSubMenu(null);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+    setActiveDropdown(null);
+    setActiveSubMenu(null);
+  };
 
   const menuItems = [
     {
@@ -20,7 +34,7 @@ const Navbar = ({ cartCount, onCartClick }) => {
       label: "The Pod™",
       key: "Pod",
       links: [
-        { path: "/Pod", label: "The Cushki Pod™" },
+        { path: "/pod", label: "The Cushki Pod™" },
         { path: "/pod-fabric-sets", label: "Pod™ Cover Sets" },
         { path: "/pod-liner-sets", label: "Pod™ Liner Sets" },
       ],
@@ -39,18 +53,17 @@ const Navbar = ({ cartCount, onCartClick }) => {
       links: [
         { path: "/why-cushki", label: "Why Cushki" },
         { path: "/see-builds", label: "See Builds" },
-        { path: "#", label: "Wall of Love" },
+        { path: "/our-fabric", label: "Our Fabric" },
       ],
     },
     {
       label: "Support",
       key: "support",
       links: [
-        { path: "/faq", label: "FAQs" },
-        { path: "/shipping-returns", label: "Shipping & Returns" },
-        { path: "/warranty", label: "Warranty" },
-        { path: "/care", label: "Care Instructions" },
-        { path: "/terms", label: "Terms & Conditions" },
+        { path: "/faq?tab=care", label: "FAQ Care" },
+        { path: "/faq?tab=shipping", label: "FAQ Shipping" },
+        { path: "/faq?tab=returns", label: "FAQ Returns & Warranty" },
+        { path: "/faq?tab=safety", label: "FAQ Use & Safety" },
       ],
     },
   ];
@@ -62,14 +75,12 @@ const Navbar = ({ cartCount, onCartClick }) => {
       </div>
 
       <nav className="navbar">
-        {/* Logo */}
         <div className="navbar-logo">
           <Link to="/">
             <img src="/assets/CUSHKI.png" alt="Cushki Logo" className="logo-img" />
           </Link>
         </div>
 
-        {/* Navbar Links - Auto-generated */}
         <ul className="navbar-links">
           {menuItems.map((menu) => (
             <li
@@ -92,14 +103,55 @@ const Navbar = ({ cartCount, onCartClick }) => {
           ))}
         </ul>
 
-        {/* Cart Icon */}
-        <div className="cart-icon-wrapper" onClick={onCartClick}>
-          <FaShoppingCart className="cart-icon" />
-          {cartCount > 0 && (
-            <span className="cart-count-badge">{cartCount}</span>
-          )}
+        <div className="navbar-icons">
+          <div className="cart-icon-wrapper" onClick={onCartClick}>
+            <FaShoppingCart className="cart-icon" />
+            {cartCount > 0 && (
+              <span className="cart-count-badge">{cartCount}</span>
+            )}
+          </div>
+
+          <div className="hamburger" onClick={toggleMobileMenu}>
+            {isMobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+          </div>
         </div>
       </nav>
+
+      {/* Mobile Menu */}
+      {isMobileMenuOpen && (
+        <div className="mobile-menu">
+          {activeSubMenu === null ? (
+            menuItems.map((menu) => (
+              <div key={menu.key} className="mobile-menu-section">
+                <div
+                  className="mobile-menu-title"
+                  onClick={() => setActiveSubMenu(menu.key)}
+                >
+                  {menu.label} <span className="mobile-menu-arrow">›</span>
+                </div>
+              </div>
+            ))
+          ) : (
+            <>
+              <div className="mobile-menu-back" onClick={() => setActiveSubMenu(null)}>
+                ← Back
+              </div>
+              {menuItems
+                .find((menu) => menu.key === activeSubMenu)
+                ?.links.map((link, index) => (
+                  <Link
+                    to={link.path}
+                    key={index}
+                    onClick={closeMobileMenu}
+                    className="mobile-menu-link"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+            </>
+          )}
+        </div>
+      )}
     </>
   );
 };

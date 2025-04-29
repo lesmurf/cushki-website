@@ -19,21 +19,28 @@ const Footer = () => {
         <div className="footer-links">
           <div className="footer-column">
             <h4>SHOP</h4>
-            <a href="#">The Collection</a>
-            <a href="#">The Gallery</a>
-            <a href="#">The Keepsake</a>
+            <a href="/shop-classic">The Cushki Classic</a>
+            <a href="/pod">The Cushki Pod</a>
+            <a href="#">Accessories</a>
           </div>
           <div className="footer-column">
-            <h4>INFO</h4>
-            <a href="#">How it works</a>
-            <a href="#">About Us</a>
-            <a href="#">FAQs</a>
+            <h4>EXPLORE</h4>
+            <a href="/why-cushki">Why Cushki</a>
+            <a href="/see-builds">See Builds</a>
+            <a href="/our-fabric">Our Fabric</a>
           </div>
           <div className="footer-column">
-            <h4>CONNECT</h4>
+            <h4>CUSTOMER CARE</h4>
+            <a href="/faq?tab=care">FAQ</a>
             <a href="#">Contact Us</a>
-            <a href="#">Share Your Story</a>
-            <a href="#">Collaborate With Us</a>
+            <a href="#">Shipping Info</a>
+            <a href="#">Returns & Warranty</a>
+          </div>
+          <div className="footer-column">
+            <h4>OUR POLICIES</h4>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Safety Disclaimer</a>
           </div>
         </div>
 

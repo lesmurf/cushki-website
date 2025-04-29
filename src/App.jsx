@@ -22,6 +22,7 @@ import PodLinerPage from './pages/PodLinerPage';
 
 import WhyCushkiPage from './pages/WhyCushkiPage';
 import BuildsPage from './pages/BuildsPage'
+import OurFabricPage from './pages/OurFabricPage';
 
 import FAQPage from './pages/FAQPage';
 import TermsPage from './pages/TermsPage';
@@ -115,6 +116,7 @@ function App() {
 
           <Route path="/see-builds" element={<BuildsPage />} />
           <Route path="/why-cushki" element={<WhyCushkiPage />} />
+          <Route path="/our-fabric" element={<OurFabricPage />} />
 
           <Route path="/faq" element={<FAQPage />} />
           <Route path="/terms" element={<TermsPage />} />
