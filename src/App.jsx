@@ -100,11 +100,11 @@ function App() {
         .map(item => `${item.variantId}:${item.quantity}`)
         .join(',')}`;
 
-      console.log("🛒 Cart URL:", cartUrl);
+      console.log("➡️ Redirecting to:", cartUrl);
 
-      // ✅ Force a real, full-page redirect — not internal routing
-      window.location.href = cartUrl;
+      window.open(cartUrl, "_blank"); // ✅ Open in new tab to prevent React Router hijack
     };
+
 
 
   // ✅ Password Gate check AFTER all hooks
