@@ -102,8 +102,9 @@ function App() {
 
       console.log("➡️ Redirecting to:", cartUrl);
 
-      window.open(cartUrl, "_blank"); // ✅ Open in new tab to prevent React Router hijack
+      window.location.href = cartUrl; // ✅ simple and clean
     };
+
 
 
 
