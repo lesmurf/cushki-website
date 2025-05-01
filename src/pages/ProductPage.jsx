@@ -11,7 +11,7 @@ const colors = {
     image: '/assets/colorToImageProduct/blue1.png',
     name: 'Skywhisper',
     description: 'A serene, dreamy blue in double-brushed microsuede that brings calm and joy to any space',
-    variantId: '50579798262080',
+    variantId: '50582549168448',
     fabric: 'Double-brushed Microsuede'
   },
   Grey: {
