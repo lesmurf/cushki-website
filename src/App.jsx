@@ -93,11 +93,10 @@ function App() {
     });
   };
 
-  const cartUrl = `https://shopcushkisg.com/cart/${cartItems
+  const cartUrl = `https://shop.cushkicosy.com/cart/${cartItems
     .map(item => `${item.variantId}:${item.quantity}`)
     .join(',')}`;
 
-  window.location.href = cartUrl;
 
   // ✅ Password Gate check AFTER all hooks
   if (isPasswordProtected && !isUnlocked) {
