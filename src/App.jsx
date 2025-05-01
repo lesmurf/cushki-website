@@ -93,9 +93,15 @@ function App() {
     });
   };
 
+  const handleCheckout = () => {
   const cartUrl = `https://shop.cushkicosy.com/cart/${cartItems
     .map(item => `${item.variantId}:${item.quantity}`)
     .join(',')}`;
+
+  console.log("➡️ Redirecting to:", cartUrl);
+  window.location.href = cartUrl;
+};
+
 
 
   // ✅ Password Gate check AFTER all hooks
