@@ -93,13 +93,11 @@ function App() {
     });
   };
 
-    const cartUrl = `https://shop.cushkisg.com/cart/${cartItems
-      .map(item => `${item.variantId}:${item.quantity}`)
-      .join(',')}`;
+  const cartUrl = `https://shopcushkisg.com/cart/${cartItems
+    .map(item => `${item.variantId}:${item.quantity}`)
+    .join(',')}`;
 
-    window.location.href = cartUrl;
-
-
+  window.location.href = cartUrl;
 
   // ✅ Password Gate check AFTER all hooks
   if (isPasswordProtected && !isUnlocked) {
