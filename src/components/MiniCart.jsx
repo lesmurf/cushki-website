@@ -43,6 +43,12 @@ const MiniCart = ({ cartItems, onRemove, onCheckout, onClose, onUpdateQuantity }
         </div>
 
         {/* ✅ Sticky Footer */}
+        <div className="discount-note">
+          Got a discount code? Use it at checkout to save!
+        </div>
+        <div className="cart-total">
+          <strong>Total:</strong> ${total.toFixed(2)}
+        </div>
         <button className="checkout-btn" onClick={onCheckout}>
           Checkout
         </button>
