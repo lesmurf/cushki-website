@@ -12,13 +12,8 @@ const MiniCart = ({
 
   const currency = new Intl.NumberFormat('en-US', {
     style: 'currency',
-    currency: 'SGD',
+    currency: 'USD',
   });
-
-  // Bundle detection
-  const hasClassic = cartItems.find(item => item.title === 'The Cushki Classic' && item.quantity === 1);
-  const hasPod = cartItems.find(item => item.title === 'The Cushki Pod' && item.quantity === 1);
-  const isStrictBundle = hasClassic && hasPod && cartItems.length === 2;
 
   return (
     <div className="mini-cart-overlay" role="dialog" aria-modal="true" aria-label="Shopping Cart">
@@ -61,7 +56,7 @@ const MiniCart = ({
                 <button
                   className="remove-btn"
                   onClick={() => onRemove(index)}
-                  aria-label={`Remove ${item.title}`}
+                  aria-label={Remove ${item.title}}
                 >✕</button>
               </div>
             ))
@@ -70,27 +65,16 @@ const MiniCart = ({
 
         {/* Sticky Footer */}
         <div className="discount-note">
-          {isStrictBundle
-            ? '🎉 You unlocked a bundle discount!'
-            : 'Got a discount code? Use it at checkout to save!'}
+          Got a discount code? Use it at checkout to save!
         </div>
 
         <div className="cart-total">
           <strong>Total:</strong> {currency.format(total)}
         </div>
 
-        {isStrictBundle ? (
-          <a
-            href="https://shopcushkisg.com/discount/BIGBUNDLE10"
-            className="checkout-btn"
-          >
-            Checkout with 10% Bundle Discount
-          </a>
-        ) : (
-          <button className="checkout-btn" onClick={onCheckout}>
-            Checkout
-          </button>
-        )}
+        <button className="checkout-btn" onClick={onCheckout}>
+          Checkout
+        </button>
       </div>
     </div>
   );
