@@ -10,15 +10,15 @@ const MiniCart = ({
 }) => {
   const total = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
-  const currency = new Intl.NumberFormat('en-US', {
+  const currency = new Intl.NumberFormat('en-SG', {
     style: 'currency',
-    currency: 'USD',
+    currency: 'SGD',
   });
 
   return (
     <div className="mini-cart-overlay" role="dialog" aria-modal="true" aria-label="Shopping Cart">
       <div className="mini-cart">
-        
+
         {/* Header */}
         <div className="mini-cart-header">
           <h2>Your Cart ({cartItems.reduce((sum, item) => sum + item.quantity, 0)})</h2>
@@ -56,7 +56,7 @@ const MiniCart = ({
                 <button
                   className="remove-btn"
                   onClick={() => onRemove(index)}
-                  aria-label={Remove ${item.title}}
+                  aria-label={`Remove ${item.title}`}
                 >✕</button>
               </div>
             ))
