@@ -1,16 +1,16 @@
 import React from 'react';
-import '../styles/ShippingPage.css'; // ✅ New CSS specific to shipping
+import '../styles/ShippingPage.css'; // ✅ Page-specific styling
 
 const Shipping = () => {
   return (
     <div className="shipping-page">
       <h1>Shipping Information</h1>
 
+      {/* Local Shipping */}
       <section>
         <h2>Local Shipping (Singapore)</h2>
         <p>
-          Cushki uses local courier services such as J&T Express to deliver orders. We aim to dispatch all orders within 1–3 working days after payment has been processed.
-          During festive, sale, or promotional periods, please allow an additional 2–4 working days due to higher volume.
+          We use trusted local courier services like J&T Express. Orders are typically dispatched within <strong>1–3 working days</strong> after payment. During sales or peak periods, please allow up to <strong>2–4 additional days</strong> for processing.
         </p>
 
         <table>
@@ -31,71 +31,57 @@ const Shipping = () => {
         </table>
 
         <ul>
-          <li>Free local shipping for orders above S$90</li>
-          <li>All courier services come with a tracking number</li>
+          <li><strong>Free local shipping</strong> on orders above <strong>S$90</strong></li>
+          <li>All deliveries come with tracking numbers</li>
         </ul>
       </section>
 
+      <hr />
+
+      {/* Self Collection */}
       <section>
-        <h2>Self Collection</h2>
-        <p>
-          Self-collection is available at our workspace near Kaki Bukit MRT (Shun Li Industrial Park).
-        </p>
+        <h2>Self-Collection</h2>
+        <p>Pick up your order from our workspace near Kaki Bukit MRT (Shun Li Industrial Park):</p>
         <ul>
-          <li>Please wait for a self-collection confirmation email before coming down.</li>
-          <li>The full address will be provided via email after confirmation.</li>
-          <li>If you initially chose self-collection but later switch to delivery, a S$3 fee will apply regardless of eligibility for free shipping.</li>
+          <li>Wait for a self-collection confirmation email before visiting</li>
+          <li>Full address will be provided upon confirmation</li>
+          <li>Changing to delivery after selecting self-collection incurs a flat <strong>S$3 fee</strong></li>
         </ul>
       </section>
 
+      <hr />
+
+      {/* International Shipping */}
       <section>
         <h2>International Shipping</h2>
-        <p>Yes! We ship worldwide. Please refer to the table below for the information.</p>
+        <p>We ship worldwide! The following table shows estimated rates by region:</p>
 
         <div className="shipping-zone-table">
-          <div className="shipping-zone">
-            <h4>$8–$10</h4>
-            <p>West Malaysia</p>
-          </div>
-          <div className="shipping-zone">
-            <h4>$12–$16</h4>
-            <p>East Malaysia</p>
-          </div>
-          <div className="shipping-zone">
-            <h4>$16–$22</h4>
-            <p>Hong Kong, Thailand, Indonesia, Taiwan</p>
-          </div>
-          <div className="shipping-zone">
-            <h4>$18–$35</h4>
-            <p>Australia, China, New Zealand, India</p>
-          </div>
-          <div className="shipping-zone">
-            <h4>$18–$25</h4>
-            <p>Vietnam, South Korea, Brunei, Philippines</p>
-          </div>
-          <div className="shipping-zone">
-            <h4>$30</h4>
-            <p>Cambodia, Myanmar, Sri Lanka</p>
-          </div>
-          <div className="shipping-zone">
-            <h4>$30–$45</h4>
-            <p>U.S, Canada, Mexico, U.K, Germany, France</p>
-          </div>
+          <div className="shipping-zone"><h4>$8–$10</h4><p>West Malaysia</p></div>
+          <div className="shipping-zone"><h4>$12–$16</h4><p>East Malaysia</p></div>
+          <div className="shipping-zone"><h4>$16–$22</h4><p>Hong Kong, Thailand, Indonesia, Taiwan</p></div>
+          <div className="shipping-zone"><h4>$18–$35</h4><p>Australia, China, New Zealand, India</p></div>
+          <div className="shipping-zone"><h4>$18–$25</h4><p>Vietnam, South Korea, Brunei, Philippines</p></div>
+          <div className="shipping-zone"><h4>$30</h4><p>Cambodia, Myanmar, Sri Lanka</p></div>
+          <div className="shipping-zone"><h4>$30–$45</h4><p>U.S., Canada, Mexico, U.K., Germany, France</p></div>
         </div>
 
         <ul>
-          <li>Rates are based on estimate — actual rate will be calculated at checkout.</li>
-          <li>Countries we ship internationally are not limited to this table.</li>
-          <li>Prices listed above are in SGD.</li>
-          <li><strong>Free international shipping</strong> for Malaysia orders <strong>above S$100</strong>.</li>
-          <li><strong>Free international shipping</strong> for other countries for orders <strong>above S$200</strong>.</li>
-          <li>All couriers come with tracking. You may track your parcel via the link provided after shipping.</li>
-          <li>Parcels may exclude customs handling fees (if any).</li>
-          <li>Malaysia orders typically take about 1 week to arrive.</li>
-          <li>Rest of the world typically takes about 2 weeks to arrive.</li>
+          <li>Actual shipping rates are calculated at checkout</li>
+          <li>We ship to more countries than listed above</li>
+          <li>Prices shown are in SGD</li>
+          <li><strong>Free international shipping</strong> to Malaysia for orders above <strong>S$100</strong></li>
+          <li><strong>Free international shipping</strong> to all other regions for orders above <strong>S$200</strong></li>
+          <li>All orders include parcel tracking</li>
+          <li>Delivery times:
+            <ul>
+              <li>Malaysia: approx. 1 week</li>
+              <li>Rest of world: approx. 2 weeks</li>
+            </ul>
+          </li>
+          <li>Customs duties or import fees (if any) are not included</li>
         </ul>
       </section>
-
     </div>
   );
 };

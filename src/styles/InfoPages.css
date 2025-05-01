@@ -1,15 +1,16 @@
 .info-page {
     max-width: 800px;
     margin: 80px auto 40px auto;
-    /* centers and gives breathing space */
     padding: 0 20px;
     font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
     color: #333;
     line-height: 1.7;
+    background-color: #fff;
+    /* Optional: white background for better contrast */
 }
 
 .info-page h1 {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     margin-bottom: 1.5rem;
     text-align: center;
     font-weight: 700;
@@ -25,25 +26,49 @@
 }
 
 .info-page p {
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
     font-size: 1rem;
+    color: #444;
 }
 
 .info-page ul {
-    padding-left: 20px;
-    margin-bottom: 1.5rem;
+    padding-left: 1.25rem;
+    margin-bottom: 1.75rem;
 }
 
 .info-page ul li {
     margin-bottom: 0.75rem;
     font-size: 1rem;
+    color: #444;
 }
 
 .info-page a {
     color: #c9184a;
     text-decoration: underline;
+    font-weight: 500;
 }
 
 .info-page a:hover {
     color: #a1133a;
+    text-decoration: underline;
+}
+
+/* Responsive tweak */
+@media (max-width: 600px) {
+    .info-page {
+        padding: 0 16px;
+    }
+
+    .info-page h1 {
+        font-size: 2rem;
+    }
+
+    .info-page h2 {
+        font-size: 1.4rem;
+    }
+
+    .info-page p,
+    .info-page ul li {
+        font-size: 0.95rem;
+    }
 }

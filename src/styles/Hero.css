@@ -1,7 +1,6 @@
-/* Hero.css */
-
+/* Hero Section */
 .hero {
-    background-color: var(--color-background);
+    background-color: var(--color-background, #f8f8f8);
     padding: 4rem 2rem;
 }
 
@@ -10,35 +9,36 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    /* Mobile first */
     align-items: center;
     text-align: center;
     gap: 3rem;
 }
 
+/* Hero Text */
 .hero-text {
     max-width: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
+    font-family: var(--font-body, sans-serif);
 }
 
 .hero-text h1 {
     font-size: 2.8rem;
     font-weight: 800;
-    font-family: var(--font-heading);
-    color: var(--color-text);
+    font-family: var(--font-heading, sans-serif);
+    color: var(--color-text, #000);
     line-height: 1.2;
 }
 
 .hero-text p {
     font-size: 1.1rem;
-    color: var(--color-text-secondary);
-    font-family: var(--font-body);
+    color: var(--color-text-secondary, #555);
     max-width: 400px;
 }
 
+/* Buttons */
 .hero-buttons {
     display: flex;
     flex-wrap: wrap;
@@ -51,31 +51,35 @@
     font-weight: bold;
     border-radius: 30px;
     text-decoration: none;
-    font-family: var(--font-body);
+    font-family: inherit;
     transition: all 0.3s ease;
+    display: inline-block;
 }
 
+/* Primary Button */
 .btn-primary {
-    background-color: var(--color-highlight);
-    color: var(--color-text);
+    background-color: var(--color-primary, #ffe600);
+    color: #f9f9f9
 }
 
 .btn-primary:hover {
-    background-color: var(--color-primary);
-    color: white;
+    background-color: var(--color-primary-hover, #ff9f1c);
+    color: #fff;
 }
 
+/* Secondary Button */
 .btn-secondary {
-    background-color: white;
-    border: 2px solid var(--color-primary);
-    color: var(--color-primary);
+    background-color: transparent;
+    border: 2px solid var(--color-primary-hover, #ff9f1c);
+    color: var(--color-primary-hover, #ff9f1c);
 }
 
 .btn-secondary:hover {
-    background-color: var(--color-primary);
-    color: white;
+    background-color: var(--color-primary-hover, #ff9f1c);
+    color: #fff;
 }
 
+/* Hero Image */
 .hero-image img {
     width: 100%;
     max-width: 500px;
@@ -83,7 +87,7 @@
     box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Desktop view */
+/* Desktop */
 @media (min-width: 768px) {
     .hero-content {
         flex-direction: row;

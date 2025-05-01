@@ -21,7 +21,7 @@ import PodFabricPage from './pages/PodFabricPage';
 import PodLinerPage from './pages/PodLinerPage';
 
 import WhyCushkiPage from './pages/WhyCushkiPage';
-import BuildsPage from './pages/BuildsPage'
+import BuildsPage from './pages/BuildsPage';
 import OurFabricPage from './pages/OurFabricPage';
 
 import FAQPage from './pages/FAQPage';
@@ -32,7 +32,6 @@ import ReturnsPage from './pages/ReturnsPage';
 import TermsPage from './pages/TermsPage';
 import PrivacyPage from './pages/PrivacyPage';
 import SafetyPage from './pages/SafetyPage';
-
 
 import './styles/global.css';
 
@@ -50,19 +49,17 @@ function HomePage() {
 }
 
 function App() {
-  // 🛡️ Password Gate and Cart State - ALL HOOKS MUST BE AT TOP
   const [isUnlocked, setIsUnlocked] = useState(() => {
-    // ✅ Check localStorage first when app loads
     return localStorage.getItem('isUnlocked') === 'true';
   });
 
   const [cartItems, setCartItems] = useState([]);
   const [showCart, setShowCart] = useState(false);
 
-  const isPasswordProtected = true; // ✅ Flip this to false to remove password protection
+  const isPasswordProtected = true;
 
   const unlockSite = () => {
-    localStorage.setItem('isUnlocked', 'true'); // ✅ Save into localStorage
+    localStorage.setItem('isUnlocked', 'true');
     setIsUnlocked(true);
   };
 
@@ -93,24 +90,30 @@ function App() {
     });
   };
 
+  const hasClassic = cartItems.some(item => item.title === "Cushki Classic");
+  const hasPod = cartItems.some(item => item.title === "Cushki Pod");
+  const isBigBundle = hasClassic && hasPod;
+
   const handleCheckout = () => {
-  const cartUrl = `https://shopcushkisg.com/cart/${cartItems
-    .map(item => `${item.variantId}:${item.quantity}`)
-    .join(',')}`;
+    let cartUrl;
 
-  console.log("➡️ Redirecting to:", cartUrl);
-  window.location.href = cartUrl;
-};
+    if (isBigBundle) {
+      const bigBundleVariantId = '9792193298752';
+      cartUrl = `https://shopcushkisg.com/cart/${bigBundleVariantId}:1`;
+    } else {
+      cartUrl = `https://shopcushkisg.com/cart/${cartItems
+        .map(item => `${item.variantId}:${item.quantity}`)
+        .join(',')}`;
+    }
 
+    console.log("➡️ Redirecting to:", cartUrl);
+    window.location.href = cartUrl;
+  };
 
-
-
-  // ✅ Password Gate check AFTER all hooks
   if (isPasswordProtected && !isUnlocked) {
     return <PasswordGate unlockSite={unlockSite} />;
   }
 
-  // ✅ Normal app rendering
   return (
     <Router>
       <Navbar cartCount={totalCartQuantity} onCartClick={openMiniCart} />
@@ -124,21 +127,16 @@ function App() {
           <Route path="/pod" element={<PodPage addToCart={addToCart} />} />
           <Route path="/pod-fabric-sets" element={<PodFabricPage addToCart={addToCart} />} />
           <Route path="/pod-liner-sets" element={<PodLinerPage addToCart={addToCart} />} />
-
           <Route path="/see-builds" element={<BuildsPage />} />
           <Route path="/why-cushki" element={<WhyCushkiPage />} />
           <Route path="/our-fabric" element={<OurFabricPage />} />
-
           <Route path="/faq" element={<FAQPage />} />
-
-
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/shipping" element={<ShippingPage />} />
           <Route path="/returns" element={<ReturnsPage />} />
           <Route path="/terms" element={<TermsPage />} />
           <Route path="/privacy" element={<PrivacyPage />} />
           <Route path="/safety" element={<SafetyPage />} />
-
         </Routes>
       </div>
 

@@ -1,75 +1,81 @@
 import React from 'react';
-import '../styles/InfoPages.css'; // ✅ Reusing your existing CSS
+import '../styles/InfoPages.css';
 
 const Terms = () => {
   return (
     <div className="info-page">
       <h1>Terms & Conditions</h1>
 
-      <p>Welcome to Cushki. Throughout the site, the terms "we," "us," and "our" refer to Cushki, and “you” refers to you, the user of this site. We offer this website, including all information, tools, and services available from this site to you, conditioned upon your acceptance of all terms, conditions, policies, and notices stated here.</p>
+      <p>
+        Welcome to Cushki. Throughout this site, the terms "we", "us", and "our" refer to Cushki. The term “you” refers to the user of this site. By using this website, you agree to all the terms, conditions, policies, and notices stated here.
+      </p>
 
-      <p>We may correct any errors or omissions in any information on our site or communications without prior notice or liability. We also reserve the right to update, change, or discontinue any aspect of our site at any time. Your continued use of the site following changes indicates your acceptance of those changes.</p>
+      <p>
+        We reserve the right to correct any errors or omissions, and to update or discontinue any part of the site at any time, without prior notice. Continued use of the site constitutes your acceptance of such changes.
+      </p>
 
       <h2>General</h2>
-      <p>Sale of goods through this website is carried out under Cushki, registered in Singapore.</p>
+      <p>Sales on this site are conducted by Cushki, registered in Singapore.</p>
 
       <h2>Copyright</h2>
-      <p>All content on this site — including text, graphics, logos, images, downloads, and software — is the property of Cushki and is protected by international copyright laws. The compilation of all content is the exclusive property of Cushki.</p>
+      <p>All content on this website — including text, graphics, images, and downloads — is the property of Cushki and protected by copyright laws. Reproduction without consent is prohibited.</p>
 
       <h2>Product Information</h2>
       <ul>
-        <li>All product measurements are approximate and may vary slightly (±0.5 to 1 inch) due to manufacturing processes.</li>
-        <li>We make every effort to display our products accurately, but colors may vary depending on your device settings.</li>
-        <li>Variations in print placement and minor fabric details (such as threads or markings on the inner lining) are not considered defects.</li>
+        <li>Measurements may vary slightly (±0.5 to 1 inch).</li>
+        <li>Actual product colors may differ slightly due to monitor settings.</li>
+        <li>Minor fabric details (e.g., thread knots, inner lining marks) are not considered defects.</li>
       </ul>
 
       <h2>Orders</h2>
       <ul>
-        <li>Once an order is placed, it cannot be cancelled, amended, or combined with another order.</li>
-        <li>Please ensure all details are correct before checking out.</li>
-        <li>We only recognize the original buyer (not third parties) for any order-related queries or returns.</li>
-        <li>If you placed your order via TikTok, our standard website return and exchange policies still apply.</li>
+        <li>Orders cannot be cancelled, edited, or combined after submission.</li>
+        <li>Ensure all information is accurate before checkout.</li>
+        <li>We communicate only with the original buyer for all order-related matters.</li>
+        <li>Orders via TikTok are subject to the same return policy as cushkisg.com.</li>
       </ul>
 
       <h2>Payments</h2>
       <ul>
-        <li>Double-check your selected items before confirming payment; no changes can be made afterward.</li>
-        <li>Payment methods accepted: Mastercard, Visa, PayNow, iBanking, Atome, GrabPay, and others shown at checkout.</li>
-        <li>Cushki is not responsible for delayed or rejected payments by third-party processors.</li>
-        <li>If we cannot fulfil your order, a full refund will be issued via store credits.</li>
+        <li>Please review items before payment — no edits can be made afterward.</li>
+        <li>We accept Visa, Mastercard, PayNow, iBanking, Atome, GrabPay, and others listed at checkout.</li>
+        <li>Cushki is not liable for failed or delayed payments from third-party services.</li>
+        <li>Unfulfillable orders will be refunded via store credit.</li>
       </ul>
 
       <h2>Shipping</h2>
-      <p>We dispatch orders within 1 to 3 working days, but slight delays may occur during peak periods. Cushki is not liable for any lost or delayed parcels once they are handed over to the courier.</p>
+      <p>Orders are dispatched within 1–3 working days. Cushki is not responsible for delays or loss once parcels are handed over to the courier.</p>
 
       <h2>Returns & Exchanges</h2>
       <ul>
-        <li>Local orders: 7 days, International orders: 20 days from shipping confirmation to request an exchange.</li>
-        <li>Items purchased with more than 10% discount, store credits, gift cards, or during sales are non-exchangeable and non-refundable.</li>
-        <li>Returned items must be unworn, unwashed, with tags intact, and securely packed.</li>
-        <li>Tracked shipping for returns is required; lost return parcels are the customer's responsibility.</li>
+        <li>Local: 7 days, International: 20 days from shipping confirmation to request an exchange.</li>
+        <li>No returns/exchanges for items with 10%+ discount, during sales, or paid via store credit.</li>
+        <li>Returned items must be unused, unwashed, and tagged.</li>
+        <li>Tracked shipping is required. Lost return parcels are the buyer’s responsibility.</li>
       </ul>
 
       <h2>Defective or Incorrect Items</h2>
-      <p>We conduct strict quality checks before dispatching orders. If you receive a defective or incorrect item, please contact us immediately. Exchanges are subject to stock availability. Sale items are not eligible for returns or exchanges.</p>
+      <p>We inspect every order. If you receive a faulty or wrong item, contact us immediately. Exchanges depend on availability. Sale items are final and not eligible for return/exchange.</p>
 
       <h2>E-Vouchers & Gift Cards</h2>
-      <p>Issued in SGD, non-redeemable for cash, and valid for one year from the date of issue. Treat vouchers and gift cards like cash.</p>
+      <p>Issued in SGD, non-transferable, non-redeemable for cash, and valid for 1 year. Treat like cash.</p>
 
       <h2>Store Credits</h2>
-      <p>Issued in SGD, non-redeemable for cash, non-transferable, and valid for 180 days from issue. Refunds for out-of-stock items paid by store credit will be reissued via store credit.</p>
+      <p>Issued in SGD, valid for 180 days. Not redeemable for cash or transferable.</p>
 
       <h2>Backorders</h2>
-      <p>Backorder items usually take 6 to 8 weeks to arrive, subject to delays. If an order contains both ready-stock and backorder items, shipping will occur only when the backorder item arrives. Backorder purchases are strictly non-refundable.</p>
+      <p>
+        Backorders take 6–8 weeks (or longer) and may be delayed. If your order includes a backorder item, shipping will occur only once it arrives. All backorder sales are final.
+      </p>
 
       <h2>Accuracy of Information</h2>
-      <p>We strive for accuracy, but specifications, descriptions, and pricing may occasionally be incorrect or out of date. Colors displayed on screen may slightly differ from real-life product colors.</p>
+      <p>We strive for accuracy, but there may occasionally be errors in descriptions, pricing, or availability. Colors may differ slightly from screen to reality.</p>
 
       <h2>Terms of Sale</h2>
-      <p>By placing an order, you confirm that the information provided is true and that you are authorized to use the selected payment method. We reserve the right to accept, modify, or decline any order at our discretion. If a pricing error occurs, we may cancel and refund affected orders.</p>
+      <p>By placing an order, you agree that all information is true and the payment method is authorized. We reserve the right to accept, cancel, or modify any order at our discretion.</p>
 
       <h2>Privacy</h2>
-      <p>We respect your privacy and do not sell your personal data to third parties. For full details, please view our <a href="/privacy">Privacy Policy</a>.</p>
+      <p>We do not sell your data. For more info, read our <a href="/privacy">Privacy Policy</a>.</p>
     </div>
   );
 };

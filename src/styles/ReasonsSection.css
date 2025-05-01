@@ -1,81 +1,76 @@
-/* ReasonsSection.css */
-
+/* Section Layout */
 .reasons-section {
-    background-color: var(--color-background);
-    padding: 4rem 2rem;
+    background-color: var(--color-background, #f9f9f9);
+    padding: 3rem 2rem;
     text-align: center;
 }
 
+/* Heading */
 .reasons-heading h2 {
     font-size: 2rem;
-    font-family: var(--font-heading);
-    color: var(--color-text);
+    font-family: var(--font-heading, sans-serif);
+    color: var(--color-text, #000);
     margin-bottom: 0.5rem;
 }
 
 .reasons-heading p {
     font-size: 1.1rem;
-    font-family: var(--font-body);
-    color: var(--color-text-secondary);
+    font-family: var(--font-body, sans-serif);
+    color: var(--color-text-secondary, #555);
     margin-bottom: 3rem;
 }
 
+/* Responsive Grid */
 .reasons-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 2rem;
 }
 
-/* Card */
+/* Card Structure */
 .reason-card {
-    background-color: var(--color-background-secondary);
+    background-color: var(--color-background-secondary, #ececec);
     border-radius: 1.5rem;
     padding: 2rem;
-    text-align: center;
-    transition: all 0.4s ease;
-    position: relative;
-    overflow: hidden;
     height: 250px;
+    overflow: hidden;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
+    transition: all 0.4s ease;
 }
 
-/* Hover Background */
+/* Hover Background Layer */
 .reason-card::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background: var(--hover-bg) center/cover no-repeat;
     opacity: 0;
     transition: opacity 0.4s ease;
     z-index: 1;
 }
 
-/* Dark Overlay */
+/* Overlay Layer */
 .reason-card::after {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background: rgba(0, 0, 0, 0.4);
     opacity: 0;
     transition: opacity 0.4s ease;
     z-index: 2;
 }
 
-/* On hover */
+/* Hover Activation */
 .reason-card:hover::before,
 .reason-card:hover::after {
     opacity: 1;
 }
 
-/* Text stays on top */
+/* Text Layer */
 .reason-card h3,
 .reason-card p {
     position: relative;
@@ -84,32 +79,50 @@
 
 .reason-card h3 {
     font-size: 1.2rem;
-    font-family: var(--font-heading);
-    color: var(--color-text);
+    font-family: var(--font-heading, sans-serif);
+    color: var(--color-text, #000);
     margin-bottom: 1rem;
 }
 
 .reason-card p {
     font-size: 1rem;
-    font-family: var(--font-body);
-    color: var(--color-text-secondary);
+    font-family: var(--font-body, sans-serif);
+    color: var(--color-text-secondary, #555);
 }
 
+/* On hover, text turns white */
 .reason-card:hover h3,
 .reason-card:hover p {
     color: white;
 }
 
+/* Hint Text */
 .reason-hover-hint {
     font-size: 0.8rem;
-    font-family: var(--font-body);
-    color: var(--color-text-secondary);
+    font-family: var(--font-body, sans-serif);
+    color: var(--color-text-secondary, #888);
     margin-top: 0.5rem;
     position: relative;
     z-index: 3;
-    opacity: 1;
+    transition: opacity 0.3s ease;
 }
 
 .reason-card:hover .reason-hover-hint {
     opacity: 0;
+}
+
+/* Optional: mobile-specific tweaks */
+@media (max-width: 480px) {
+    .reason-card {
+        height: 220px;
+        padding: 1.5rem;
+    }
+
+    .reason-card h3 {
+        font-size: 1rem;
+    }
+
+    .reason-card p {
+        font-size: 0.9rem;
+    }
 }

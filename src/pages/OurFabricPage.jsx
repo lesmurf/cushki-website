@@ -4,18 +4,23 @@ import '../styles/OurFabricPage.css';
 const OurFabricPage = () => {
   return (
     <div className="fabric-page">
-      {/* Hero Section */}
-      <section className="fabric-hero-section">
+      
+      {/* 🪄 Hero Section */}
+      <section className="fabric-hero">
         <h1>Why Our Fabric Feels Like Magic</h1>
-        <p className="subtext">
+        <p className="hero-subtext">
           From snuggly naps to monkey swings — our custom-milled microsuede is soft, safe,
           ultra-durable, and made for a life of fun moments (and occasional juice spills).
         </p>
-        <img src="/assets/colorToImageProduct/blue1.png" alt="Our Fabrics" className="fabric-hero-image" />
+        <img
+          src="/assets/colorToImageProduct/blue1.png"
+          alt="Our Fabric Sample"
+          className="fabric-hero-image"
+        />
       </section>
 
-      {/* Fabric Description */}
-      <section className="fabric-description">
+      {/* 📄 Overview */}
+      <section className="fabric-intro">
         <p>
           Our custom-milled microsuede is everything we dreamed of — soft like the Cushki hug,
           strong for fort building and tumble time, and machine washable to fit real-life messes.
@@ -24,15 +29,18 @@ const OurFabricPage = () => {
         <p>
           We could talk all day about how much we love this fabric — because when you find
           something that’s beautiful, durable, and made for real play, it deserves to be celebrated.
-          With Cushki, you don’t have to choose between form and function — you get both,
-          in every piece.
+          With Cushki, you don’t have to choose between form and function — you get both, in every piece.
         </p>
       </section>
 
-      {/* Fabric Feature */}
-      <section className="fabric-section">
+      {/* 🎯 Feature Detail */}
+      <section className="fabric-feature">
         <h2>Double-Brushed Microsuede</h2>
-        <img src="/assets/fabricDetails.png" alt="Microsuede Details" />
+        <img
+          src="/assets/fabricDetails.png"
+          alt="Microsuede Details"
+          className="fabric-feature-image"
+        />
         <p>
           Our double-brushed microsuede isn’t just soft — it’s a feel-good experience.
           This premium material is brushed twice during production to give it a slightly raised texture
@@ -49,6 +57,7 @@ const OurFabricPage = () => {
           our double-brushed microsuede makes every moment softer — inside and out.
         </p>
       </section>
+
     </div>
   );
 };

@@ -1,6 +1,4 @@
-/* OurFabricPage.css */
-
-/* Overall page wrapper */
+/* 🌿 Page Container */
 .fabric-page {
     background-color: var(--color-background);
     padding: 2rem 1.5rem;
@@ -8,19 +6,19 @@
     color: var(--color-text);
 }
 
-/* Hero Section */
-.fabric-hero-section {
+/* 🪄 Hero Section */
+.fabric-hero {
     text-align: center;
     margin-bottom: 3rem;
 }
 
-.fabric-hero-section h1 {
+.fabric-hero h1 {
     font-size: 2rem;
     font-family: var(--font-heading);
     margin-bottom: 0.5rem;
 }
 
-.fabric-hero-section .subtext {
+.hero-subtext {
     font-size: 1rem;
     color: var(--color-text-secondary);
     max-width: 660px;
@@ -37,8 +35,8 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Fabric description paragraph */
-.fabric-description {
+/* 📄 Intro Section */
+.fabric-intro {
     max-width: 660px;
     margin: 0 auto 3rem auto;
     font-size: 1rem;
@@ -46,25 +44,25 @@
     text-align: center;
 }
 
-.fabric-description p {
+.fabric-intro p {
     margin-bottom: 1.5rem;
     color: var(--color-text-secondary);
 }
 
-/* Fabric Feature section */
-.fabric-section {
+/* 🎯 Feature Section */
+.fabric-feature {
     max-width: 660px;
     margin: 0 auto;
     text-align: center;
 }
 
-.fabric-section h2 {
+.fabric-feature h2 {
     font-size: 1.8rem;
     font-family: var(--font-heading);
     margin-bottom: 1.5rem;
 }
 
-.fabric-section img {
+.fabric-feature-image {
     width: 100%;
     max-width: 660px;
     height: auto;
@@ -73,7 +71,7 @@
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
-.fabric-section p {
+.fabric-feature p {
     font-size: 1rem;
     line-height: 1.7;
     max-width: 700px;
@@ -81,17 +79,37 @@
     color: var(--color-text-secondary);
 }
 
-/* Responsive Mobile */
+/* 🎯 Optional CTA */
+.fabric-cta {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.cta-button {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--color-accent);
+}
+
+/* 📱 Responsive */
 @media (max-width: 768px) {
     .fabric-page {
         padding: 1.5rem 1rem;
     }
 
-    .fabric-hero-section h1 {
+    .fabric-hero h1 {
         font-size: 1.6rem;
     }
 
-    .fabric-section h2 {
+    .fabric-feature h2 {
         font-size: 1.5rem;
     }
 

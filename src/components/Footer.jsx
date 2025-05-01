@@ -1,55 +1,88 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Footer.css';
-import { FaInstagram, FaTiktok, FaShoppingCart } from 'react-icons/fa'; // Make sure react-icons installed
+import { FaInstagram, FaTiktok, FaShoppingCart } from 'react-icons/fa';
+
+const socialLinks = [
+  { icon: <FaInstagram />, label: 'Instagram', href: 'https://www.instagram.com/cushki' },
+  { icon: <FaTiktok />, label: 'TikTok', href: 'https://www.tiktok.com/@cushki' },
+  { icon: <FaShoppingCart />, label: 'Cart', to: '/cart' },
+];
+
+const footerMenus = [
+  {
+    title: 'SHOP',
+    links: [
+      { label: 'The Cushki Classic', path: '/shop-classic' },
+      { label: 'The Cushki Pod', path: '/pod' },
+      { label: 'Accessories', path: '/accessories' },
+    ],
+  },
+  {
+    title: 'EXPLORE',
+    links: [
+      { label: 'Why Cushki', path: '/why-cushki' },
+      { label: 'See Builds', path: '/see-builds' },
+      { label: 'Our Fabric', path: '/our-fabric' },
+    ],
+  },
+  {
+    title: 'CUSTOMER CARE',
+    links: [
+      { label: 'FAQ', path: '/faq?tab=care' },
+      { label: 'Contact Us', path: '/contact' },
+      { label: 'Shipping Info', path: '/shipping' },
+      { label: 'Returns & Warranty', path: '/returns' },
+    ],
+  },
+  {
+    title: 'OUR POLICIES',
+    links: [
+      { label: 'Terms & Conditions', path: '/terms' },
+      { label: 'Privacy Policy', path: '/privacy' },
+      { label: 'Safety Disclaimer', path: '/safety' },
+    ],
+  },
+];
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
-        
-        {/* Left Section: Logo + Icons */}
+        {/* Left Section: Logo + Social Icons */}
         <div className="footer-left">
           <div className="footer-logo">cushki</div>
           <div className="footer-icons">
-            <Link to="/"><FaInstagram /></Link>
-            <Link to="/"><FaTiktok /></Link>
-            <Link to="/cart"><FaShoppingCart /></Link> 
+            {socialLinks.map((item, index) =>
+              item.href ? (
+                <a
+                  key={index}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={item.label}
+                >
+                  {item.icon}
+                </a>
+              ) : (
+                <Link key={index} to={item.to} aria-label={item.label}>
+                  {item.icon}
+                </Link>
+              )
+            )}
           </div>
         </div>
 
-        {/* Right Section: Links */}
+        {/* Right Section: Link Columns */}
         <div className="footer-links">
-          
-          <div className="footer-column">
-            <h4>SHOP</h4>
-            <Link to="/shop-classic">The Cushki Classic</Link>
-            <Link to="/pod">The Cushki Pod</Link>
-            <Link to="/accessories">Accessories</Link>
-          </div>
-
-          <div className="footer-column">
-            <h4>EXPLORE</h4>
-            <Link to="/why-cushki">Why Cushki</Link>
-            <Link to="/see-builds">See Builds</Link>
-            <Link to="/our-fabric">Our Fabric</Link>
-          </div>
-
-          <div className="footer-column">
-            <h4>CUSTOMER CARE</h4>
-            <Link to="/faq?tab=care">FAQ</Link>
-            <Link to="/contact">Contact Us</Link>
-            <Link to="/shipping">Shipping Info</Link>
-            <Link to="/returns">Returns & Warranty</Link>
-          </div>
-
-          <div className="footer-column">
-            <h4>OUR POLICIES</h4>
-            <Link to="/terms">Terms & Conditions</Link>
-            <Link to="/privacy">Privacy Policy</Link>
-            <Link to="/safety">Safety Disclaimer</Link>
-          </div>
-
+          {footerMenus.map(({ title, links }) => (
+            <div className="footer-column" key={title}>
+              <h4>{title}</h4>
+              {links.map(({ label, path }) => (
+                <Link to={path} key={label}>{label}</Link>
+              ))}
+            </div>
+          ))}
         </div>
       </div>
 

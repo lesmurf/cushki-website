@@ -1,3 +1,4 @@
+/* === Overlay & Container === */
 .mini-cart-overlay {
     position: fixed;
     top: 0;
@@ -5,7 +6,7 @@
     width: 100%;
     max-width: 400px;
     height: 100vh;
-    background: #faf7ef;
+    background: var(--color-background, #faf7ef);
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
@@ -19,14 +20,7 @@
     padding: 1rem;
 }
 
-.empty-cart {
-    text-align: center;
-    padding: 2rem 0;
-    font-size: 1.1rem;
-    color: #555;
-}
-
-/* ✅ Proper header */
+/* === Header === */
 .mini-cart-header {
     display: flex;
     justify-content: space-between;
@@ -42,13 +36,21 @@
     color: #333;
 }
 
-/* ✅ Scrollable content */
+/* === Content === */
 .mini-cart-content {
     flex: 1;
     overflow-y: auto;
     padding-bottom: 1rem;
 }
 
+.empty-cart {
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* === Cart Items === */
 .cart-item {
     display: flex;
     align-items: center;
@@ -67,6 +69,17 @@
     flex: 1;
 }
 
+.cart-item-details h4 {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.cart-item-details p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* === Quantity Controls === */
 .quantity-controls {
     display: flex;
     align-items: center;
@@ -77,12 +90,17 @@
 .quantity-controls button {
     width: 30px;
     height: 30px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: bold;
     background: #f0f0f0;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: background 0.3s;
+}
+
+.quantity-controls button:focus {
+    outline: 2px solid var(--color-accent, #a8bdb0);
 }
 
 .quantity-controls span {
@@ -91,6 +109,7 @@
     font-size: 1rem;
 }
 
+/* === Remove Button === */
 .remove-btn {
     background: none;
     border: none;
@@ -99,10 +118,12 @@
     cursor: pointer;
 }
 
-/* ✅ Footer */
-.mini-cart-footer {
-    padding-top: 1rem;
-    border-top: 1px solid #ddd;
+/* === Footer === */
+.discount-note {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #777;
+    margin-bottom: 1rem;
 }
 
 .cart-total {
@@ -114,7 +135,7 @@
     margin-bottom: 1rem;
 }
 
-/* ✅ Checkout button now fits */
+/* === Checkout Button === */
 .checkout-btn {
     width: 100%;
     background-color: #36664b;
@@ -132,7 +153,7 @@
     background-color: #2a523a;
 }
 
-/* 📱 Mobile fix */
+/* === Mobile Adjustments === */
 @media (max-width: 768px) {
     .mini-cart-overlay {
         width: 90%;
@@ -142,5 +163,14 @@
     .checkout-btn {
         padding: 0.8rem;
         font-size: 1rem;
+    }
+
+    .cart-item {
+        gap: 0.5rem;
+    }
+
+    .cart-item-image {
+        width: 50px;
+        height: 50px;
     }
 }

@@ -6,29 +6,41 @@ const Safety = () => {
     <div className="info-page">
       <h1>Safety Disclaimer</h1>
 
-      <p>At Cushki, safety is our top priority. While our products are thoughtfully designed for play and relaxation, we kindly remind all customers to exercise proper care and supervision when using our furniture products.</p>
+      <p>
+        At Cushki, safety is at the heart of everything we design. While our products are made for fun, comfort, and creativity, they must be used responsibly. Please read and follow the guidelines below to ensure safe use in your home.
+      </p>
 
       <h2>Supervision</h2>
-      <p>Children should always be supervised by an adult when using Cushki products. Improper use or lack of supervision can lead to injuries, and Cushki will not be held responsible for any accidents resulting from misuse or unsupervised use.</p>
+      <p>
+        Children should always be supervised by a responsible adult while using Cushki products. We do not accept liability for accidents caused by unsupervised or improper use.
+      </p>
 
       <h2>Intended Use</h2>
       <ul>
-        <li>Cushki products are intended for indoor use only, on flat and safe surfaces.</li>
-        <li>Products should not be used near sharp edges, hard flooring without padding, open flames, or outdoor areas exposed to weather.</li>
-        <li>Furniture stacking, climbing, and jumping activities should be performed with caution and under adult supervision.</li>
+        <li>Our products are designed for indoor use on flat, safe surfaces only.</li>
+        <li>Do not place Cushki products near stairs, open flames, sharp edges, or in outdoor environments.</li>
+        <li>Jumping, climbing, and stacking should always be done cautiously and under adult supervision.</li>
       </ul>
 
-      <h2>Product Care and Inspection</h2>
-      <p>Please inspect your Cushki products regularly for any signs of damage, wear, or structural weakness. Discontinue use immediately if any issues are detected, and contact us for support.</p>
+      <h2>Product Inspection & Care</h2>
+      <p>
+        Please inspect your Cushki pieces regularly for damage, excessive wear, or compromised stitching/foam. If any issue is found, stop use immediately and contact our support team.
+      </p>
 
       <h2>Liability</h2>
-      <p>Cushki disclaims any responsibility for injuries or damages arising from misuse, negligence, unauthorized modifications, or failure to follow safety guidelines provided by us.</p>
+      <p>
+        Cushki is not responsible for injuries or property damage resulting from misuse, neglect, unauthorized alterations, or failure to follow these safety recommendations.
+      </p>
 
-      <h2>Customer Responsibility</h2>
-      <p>By purchasing and using Cushki products, you acknowledge and accept full responsibility for ensuring that products are used in a safe manner and environment suitable for play and relaxation.</p>
+      <h2>Your Responsibility</h2>
+      <p>
+        By using Cushki products, you agree to take full responsibility for ensuring safe, appropriate, and supervised usage within your household or environment.
+      </p>
 
-      <h2>Contact Us</h2>
-      <p>If you have any questions or concerns regarding the safe use of Cushki products, please contact our team at <a href="mailto:support@cushkisg.com">support@cushkisg.com</a>.</p>
+      <h2>Need Help?</h2>
+      <p>
+        If you have any concerns or safety-related questions, feel free to contact us at <a href="mailto:support@cushkisg.com">support@cushkisg.com</a>. We're always happy to help.
+      </p>
     </div>
   );
 };

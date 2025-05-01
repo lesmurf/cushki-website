@@ -9,7 +9,7 @@ const Navbar = ({ cartCount, onCartClick }) => {
   const [activeSubMenu, setActiveSubMenu] = useState(null);
 
   const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
+    setIsMobileMenuOpen((prev) => !prev);
     setActiveDropdown(null);
     setActiveSubMenu(null);
   };
@@ -22,49 +22,49 @@ const Navbar = ({ cartCount, onCartClick }) => {
 
   const menuItems = [
     {
-      label: "The Classic",
-      key: "classic",
+      label: 'The Classic',
+      key: 'classic',
       links: [
-        { path: "/shop-classic", label: "The Cushki Classic" },
-        { path: "/classic-fabric-sets", label: "Classic Cover Sets" },
-        { path: "/classic-liner-sets", label: "Classic Liner Sets" },
+        { path: '/shop-classic', label: 'The Cushki Classic' },
+        { path: '/classic-fabric-sets', label: 'Classic Cover Sets' },
+        { path: '/classic-liner-sets', label: 'Classic Liner Sets' },
       ],
     },
     {
-      label: "The Pod™",
-      key: "Pod",
+      label: 'The Pod™',
+      key: 'pod',
       links: [
-        { path: "/pod", label: "The Cushki Pod™" },
-        { path: "/pod-fabric-sets", label: "Pod™ Cover Sets" },
-        { path: "/pod-liner-sets", label: "Pod™ Liner Sets" },
+        { path: '/pod', label: 'The Cushki Pod™' },
+        { path: '/pod-fabric-sets', label: 'Pod™ Cover Sets' },
+        { path: '/pod-liner-sets', label: 'Pod™ Liner Sets' },
       ],
     },
     {
-      label: "Accessories",
-      key: "accessories",
+      label: 'Accessories',
+      key: 'accessories',
       links: [
-        { path: "#", label: "Pillows" },
-        { path: "#", label: "Extra Cushions" },
+        { path: '#', label: 'Pillows' }, // Update with actual route
+        { path: '#', label: 'Extra Cushions' }, // Update with actual route
       ],
     },
     {
-      label: "Explore",
-      key: "explore",
+      label: 'Explore',
+      key: 'explore',
       links: [
-        { path: "/why-cushki", label: "Why Cushki" },
-        { path: "/see-builds", label: "See Builds" },
-        { path: "/our-fabric", label: "Our Fabric" },
+        { path: '/why-cushki', label: 'Why Cushki' },
+        { path: '/see-builds', label: 'See Builds' },
+        { path: '/our-fabric', label: 'Our Fabric' },
       ],
     },
     {
-      label: "Support",
-      key: "support",
+      label: 'Support',
+      key: 'support',
       links: [
-        { path: "/faq?tab=care", label: "FAQ Care" },
-        { path: "/faq?tab=shipping", label: "FAQ Shipping" },
-        { path: "/faq?tab=returns", label: "FAQ Returns & Warranty" },
-        { path: "/faq?tab=safety", label: "FAQ Use & Safety" },
-        { path: "/contact", label: "Contact Us" },
+        { path: '/faq?tab=care', label: 'FAQ Care' },
+        { path: '/faq?tab=shipping', label: 'FAQ Shipping' },
+        { path: '/faq?tab=returns', label: 'FAQ Returns & Warranty' },
+        { path: '/faq?tab=safety', label: 'FAQ Use & Safety' },
+        { path: '/contact', label: 'Contact Us' },
       ],
     },
   ];
@@ -76,26 +76,28 @@ const Navbar = ({ cartCount, onCartClick }) => {
       </div>
 
       <nav className="navbar">
+        {/* Logo */}
         <div className="navbar-logo">
           <Link to="/">
             <img src="/assets/CUSHKI.png" alt="Cushki Logo" className="logo-img" />
           </Link>
         </div>
 
+        {/* Desktop Menu */}
         <ul className="navbar-links">
-          {menuItems.map((menu) => (
+          {menuItems.map(({ key, label, links }) => (
             <li
-              key={menu.key}
+              key={key}
               className="nav-item"
-              onMouseEnter={() => setActiveDropdown(menu.key)}
+              onMouseEnter={() => setActiveDropdown(key)}
               onMouseLeave={() => setActiveDropdown(null)}
             >
-              <span>{menu.label} ▼</span>
-              {activeDropdown === menu.key && (
+              <span>{label} ▼</span>
+              {activeDropdown === key && (
                 <div className="dropdown">
-                  {menu.links.map((link, index) => (
-                    <Link to={link.path} key={index}>
-                      {link.label}
+                  {links.map(({ path, label }) => (
+                    <Link to={path} key={`${key}-${label}`}>
+                      {label}
                     </Link>
                   ))}
                 </div>
@@ -104,17 +106,21 @@ const Navbar = ({ cartCount, onCartClick }) => {
           ))}
         </ul>
 
+        {/* Cart & Hamburger */}
         <div className="navbar-icons">
-          <div className="cart-icon-wrapper" onClick={onCartClick}>
+          <div className="cart-icon-wrapper" onClick={onCartClick} aria-label="View cart">
             <FaShoppingCart className="cart-icon" />
-            {cartCount > 0 && (
-              <span className="cart-count-badge">{cartCount}</span>
-            )}
+            {cartCount > 0 && <span className="cart-count-badge">{cartCount}</span>}
           </div>
 
-          <div className="hamburger" onClick={toggleMobileMenu}>
+          <button
+            className="hamburger"
+            onClick={toggleMobileMenu}
+            aria-label="Toggle mobile menu"
+            aria-expanded={isMobileMenuOpen}
+          >
             {isMobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
-          </div>
+          </button>
         </div>
       </nav>
 
@@ -122,13 +128,13 @@ const Navbar = ({ cartCount, onCartClick }) => {
       {isMobileMenuOpen && (
         <div className="mobile-menu">
           {activeSubMenu === null ? (
-            menuItems.map((menu) => (
-              <div key={menu.key} className="mobile-menu-section">
+            menuItems.map(({ key, label }) => (
+              <div key={key} className="mobile-menu-section">
                 <div
                   className="mobile-menu-title"
-                  onClick={() => setActiveSubMenu(menu.key)}
+                  onClick={() => setActiveSubMenu(key)}
                 >
-                  {menu.label} <span className="mobile-menu-arrow">›</span>
+                  {label} <span className="mobile-menu-arrow">›</span>
                 </div>
               </div>
             ))
@@ -138,15 +144,15 @@ const Navbar = ({ cartCount, onCartClick }) => {
                 ← Back
               </div>
               {menuItems
-                .find((menu) => menu.key === activeSubMenu)
-                ?.links.map((link, index) => (
+                .find((item) => item.key === activeSubMenu)
+                ?.links.map(({ path, label }) => (
                   <Link
-                    to={link.path}
-                    key={index}
-                    onClick={closeMobileMenu}
+                    to={path}
+                    key={`${activeSubMenu}-${label}`}
                     className="mobile-menu-link"
+                    onClick={closeMobileMenu}
                   >
-                    {link.label}
+                    {label}
                   </Link>
                 ))}
             </>

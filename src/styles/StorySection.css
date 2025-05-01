@@ -1,33 +1,39 @@
-/* StorySection.css */
-
+/* Story Section */
 .story-section {
-    background-color: var(--color-background-secondary);
-    padding: 2rem 2rem;
+    background-color: var(--color-background-secondary, #f9f9f9);
+    padding: 2rem;
     text-align: center;
 }
 
+/* Container */
 .story-container {
     max-width: 800px;
     margin: 0 auto;
 }
 
+/* Heading */
 .story-container h2 {
     font-size: 2rem;
-    font-family: var(--font-heading);
-    color: var(--color-text);
+    font-family: var(--font-heading, sans-serif);
+    color: var(--color-text, #000);
     margin-bottom: 2rem;
 }
 
+/* Paragraphs */
 .story-container p {
     font-size: 1.1rem;
-    font-family: var(--font-body);
-    color: var(--color-text-secondary);
+    font-family: var(--font-body, sans-serif);
+    color: var(--color-text-secondary, #555);
     margin-bottom: 1rem;
     line-height: 1.6;
 }
 
-/* Optional: if you want slightly smaller text on mobile */
+/* Mobile Optimization */
 @media (max-width: 600px) {
+    .story-container h2 {
+        font-size: 1.6rem;
+    }
+
     .story-container p {
         font-size: 1rem;
     }
