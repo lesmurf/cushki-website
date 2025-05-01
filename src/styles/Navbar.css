@@ -163,6 +163,18 @@
     color: var(--color-text, #111);
 }
 
+.mobile-menu-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.75rem;
+    color: #333;
+    cursor: pointer;
+    z-index: 1001;
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
     .navbar-links {

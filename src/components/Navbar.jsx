@@ -43,8 +43,8 @@ const Navbar = ({ cartCount, onCartClick }) => {
       label: 'Accessories',
       key: 'accessories',
       links: [
-        { path: '#', label: 'Pillows' }, // Update with actual route
-        { path: '#', label: 'Extra Cushions' }, // Update with actual route
+        { path: '#', label: 'Pillows' },
+        { path: '#', label: 'Extra Cushions' },
       ],
     },
     {
@@ -76,14 +76,12 @@ const Navbar = ({ cartCount, onCartClick }) => {
       </div>
 
       <nav className="navbar">
-        {/* Logo */}
         <div className="navbar-logo">
           <Link to="/">
             <img src="/assets/CUSHKI.png" alt="Cushki Logo" className="logo-img" />
           </Link>
         </div>
 
-        {/* Desktop Menu */}
         <ul className="navbar-links">
           {menuItems.map(({ key, label, links }) => (
             <li
@@ -106,7 +104,6 @@ const Navbar = ({ cartCount, onCartClick }) => {
           ))}
         </ul>
 
-        {/* Cart & Hamburger */}
         <div className="navbar-icons">
           <div className="cart-icon-wrapper" onClick={onCartClick} aria-label="View cart">
             <FaShoppingCart className="cart-icon" />
@@ -124,9 +121,17 @@ const Navbar = ({ cartCount, onCartClick }) => {
         </div>
       </nav>
 
-      {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="mobile-menu">
+          {/* ✕ Close Button */}
+          <button
+            className="mobile-menu-close"
+            onClick={closeMobileMenu}
+            aria-label="Close mobile menu"
+          >
+            ✕
+          </button>
+
           {activeSubMenu === null ? (
             menuItems.map(({ key, label }) => (
               <div key={key} className="mobile-menu-section">
