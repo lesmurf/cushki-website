@@ -4,7 +4,7 @@ import '../styles/ComparisonSection.css';
 
 const products = [
   {
-    name: 'Cushki™ Classic',
+    name: 'Cushki Classic',
     image: '/assets/heroSlideshow/2.png',
     features: [
       '4-piece modular sofa',
@@ -13,11 +13,11 @@ const products = [
       'Soft, durable microsuede covers',
     ],
     buttonText: 'SHOP CLASSIC',
-    route: '/classic', // ✅ Replace with your actual route
+    route: '/shop-classic', // ✅ Replace with your actual route
     buttonStyle: 'comparison-button',
   },
   {
-    name: 'Cushki™ Chunk',
+    name: 'Cushki Pod™',
     image: '/assets/heroSlideshow/2.png',
     features: [
       'Round modular arches',
@@ -25,8 +25,8 @@ const products = [
       'Double-duty as seesaw or crawl space',
       'Stackable for creative play',
     ],
-    buttonText: 'SHOP CHUNK',
-    route: '/chunk', // ✅ Replace with your actual route
+    buttonText: 'SHOP POD™',
+    route: '/pod', // ✅ Replace with your actual route
     buttonStyle: 'comparison-button secondary',
   },
 ];
