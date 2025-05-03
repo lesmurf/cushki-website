@@ -12,6 +12,7 @@ const colors = {
     description: 'A serene, dreamy blue in double-brushed microsuede that brings calm and joy to any space',
     variantId: '50582549168448',
     fabric: 'Double-brushed Microsuede',
+    stock: 1, // 👈 Add this
   },
   Grey: {
     hex: '#A8A8A8',
@@ -20,6 +21,7 @@ const colors = {
     description: 'A versatile, modern grey in double-brushed microsuede that pairs effortlessly with any mood or style.',
     variantId: '50579798393152',
     fabric: 'Double-brushed Microsuede',
+    stock: 2, // 👈 Add this
   },
   Pink: {
     hex: '#FFC5D3',
@@ -28,6 +30,7 @@ const colors = {
     description: 'A soft, warm blush pink in double-brushed microsuede made for sweet moments and cozy corners.',
     variantId: '50579798327616',
     fabric: 'Double-brushed Microsuede',
+    stock: 3, // 👈 Add this
   },
 };
 
@@ -92,6 +95,13 @@ const ProductPage = ({ addToCart }) => {
             {colors[selectedColor].description}
           </div>
 
+          {/* Stock Status */}
+          {colors[selectedColor].stock === 0 ? (
+            <p className="stock-status out">Out of stock</p>
+          ) : colors[selectedColor].stock <= 3 ? (
+            <p className="stock-status low">Only {colors[selectedColor].stock} left in stock!</p>
+          ) : null}
+
           {/* Swatches */}
           <div className="color-swatches">
             {availableColors.map((color) => (
@@ -106,8 +116,12 @@ const ProductPage = ({ addToCart }) => {
           </div>
 
           {/* Add to Cart */}
-          <button className="add-to-cart" onClick={handleAddToCart}>
-            Add to Cart - $489
+          <button
+            className="add-to-cart"
+            onClick={handleAddToCart}
+            disabled={colors[selectedColor].stock === 0}
+          >
+            {colors[selectedColor].stock === 0 ? 'Out of Stock' : 'Add to Cart - $489'}
           </button>
 
           {/* Upsell Box */}

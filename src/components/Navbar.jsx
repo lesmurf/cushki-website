@@ -78,7 +78,7 @@ const Navbar = ({ cartCount, onCartClick }) => {
       <nav className="navbar">
         <div className="navbar-logo">
           <Link to="/">
-            <img src="/assets/CUSHKI.png" alt="Cushki Logo" className="logo-img" />
+            <img src="/assets/cushki-logo.png" alt="Cushki Logo" className="logo-img" />
           </Link>
         </div>
 

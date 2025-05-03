@@ -29,7 +29,7 @@ const Returns = () => {
       <p><strong>Note:</strong> Cushki reserves the right to reject any return or exchange request that doesn’t meet our policy criteria.</p>
 
       <h2>Warranty Coverage</h2>
-      <p>All Cushki foam furniture includes a <strong>30-day limited warranty</strong> from the date of delivery.</p>
+      <p>All Cushki items includes a <strong>3-year limited warranty</strong> from the date of delivery.</p>
       <ul>
         <li>Covers manufacturing defects (e.g., faulty stitching, broken zippers, structural foam damage not caused by misuse).</li>
         <li>Does not cover normal wear and tear, misuse, water exposure, accidental damage, or visual issues like wrinkles or slight color variation.</li>

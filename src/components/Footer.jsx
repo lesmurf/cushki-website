@@ -49,9 +49,13 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
-        {/* Left Section: Logo + Social Icons */}
+        {/* Left Section: Logo + Social + Tagline */}
         <div className="footer-left">
-          <div className="footer-logo">cushki</div>
+          <div className="footer-logo">
+            <Link to="/">
+              <img src="/assets/cushki-logo-(trans).png" alt="Cushki Logo" className="logo-img" />
+            </Link>
+          </div>
           <div className="footer-icons">
             {socialLinks.map((item, index) =>
               item.href ? (
@@ -71,6 +75,9 @@ const Footer = () => {
               )
             )}
           </div>
+          <p className="footer-tagline">
+            Your Couch.<br />Their Kingdom.
+          </p>
         </div>
 
         {/* Right Section: Link Columns */}
@@ -86,11 +93,8 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom Section */}
+      {/* Bottom Section: Copyright only */}
       <div className="footer-bottom">
-        <p className="footer-tagline">
-          Your Couch.<br />Their Kingdom.
-        </p>
         <p className="footer-copy">
           © 2025 CUSHKI. Designed for Play in Singapore.
         </p>

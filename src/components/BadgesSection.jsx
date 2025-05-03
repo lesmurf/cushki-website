@@ -20,13 +20,16 @@ const BadgesSection = () => {
         </p>
       </div>
 
-      <div className="badges-grid">
-        {BADGES.map(({ image, label }) => (
-          <div key={label} className="badge">
-            <img src={image} alt={label} className="badge-icon" />
-            <div className="badge-label">{label}</div>
-          </div>
-        ))}
+      {/* SCROLL WRAPPER */}
+      <div className="badges-scroll-wrapper">
+        <div className="badges-grid">
+          {BADGES.map(({ image, label }) => (
+            <div key={label} className="badge">
+              <img src={image} alt={label} className="badge-icon" />
+              <div className="badge-label">{label}</div>
+            </div>
+          ))}
+        </div>
       </div>
 
       <div className="badges-button-wrapper">

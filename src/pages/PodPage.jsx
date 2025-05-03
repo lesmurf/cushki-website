@@ -12,6 +12,8 @@ const colors = {
     description: 'A soft, neutral beige that feels cozy and grounding.',
     variantId: '50582547366208',
     fabric: 'Double-brushed Microsuede',
+    stock: 2, 
+
   },
   Brown: {
     hex: '#a0522d',
@@ -20,6 +22,7 @@ const colors = {
     description: 'A warm, chocolatey brown for bold yet soothing vibes.',
     variantId: '50582547398976',
     fabric: 'Double-brushed Microsuede',
+    stock: 8, 
   },
   Green: {
     hex: '#8FBC8F',
@@ -28,6 +31,7 @@ const colors = {
     description: 'A lush moss green that brings the outdoors inside.',
     variantId: '50582547431744',
     fabric: 'Double-brushed Microsuede',
+    stock: 8, 
   },
 };
 
@@ -90,6 +94,13 @@ const PodPage = ({ addToCart }) => {
             {colors[selectedColor].description}
           </div>
 
+          {/* Stock Status */}
+          {colors[selectedColor].stock === 0 ? (
+            <p className="stock-status out">Out of stock</p>
+          ) : colors[selectedColor].stock <= 3 ? (
+            <p className="stock-status low">Only {colors[selectedColor].stock} left in stock!</p>
+          ) : null}
+
           <div className="color-swatches">
             {availableColors.map((color) => (
               <div
@@ -102,8 +113,12 @@ const PodPage = ({ addToCart }) => {
             ))}
           </div>
 
-          <button className="add-to-cart" onClick={handleAddToCart}>
-            Add to Cart - $389
+          <button
+            className="add-to-cart"
+            onClick={handleAddToCart}
+            disabled={colors[selectedColor].stock === 0}
+          >
+            {colors[selectedColor].stock === 0 ? 'Out of Stock' : 'Add to Cart - $389'}
           </button>
 
           <div className="bundle-box">

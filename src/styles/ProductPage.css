@@ -62,6 +62,20 @@
     color: white;
 }
 
+/* === Stock Status === */
+.stock-status {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.stock-status.low {
+    color: #d97706;
+}
+
+.stock-status.out {
+    color: #dc2626;
+}
+
 /* === Color Info === */
 .selected-color-name {
     font-family: var(--font-body);

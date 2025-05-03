@@ -39,10 +39,11 @@ function HomePage() {
   return (
     <>
       <Hero />
-      <BadgesSection />
+      <ReasonsSection />
+
       <ComparisonSection />
       <StorySection />
-      <ReasonsSection />
+      <BadgesSection />
       <ReviewsSection />
     </>
   );
