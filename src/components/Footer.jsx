@@ -49,32 +49,33 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
-        {/* Left Section: Logo + Social + Tagline */}
+        {/* Left Section: Logo + Icons + Tagline */}
         <div className="footer-left">
-          <div className="footer-logo">
-            <Link to="/">
-              <img src="/assets/cushki-logo-(trans).png" alt="Cushki Logo" className="logo-img" />
+          <div className="footer-brand">
+            <Link to="/" className="footer-logo">
+              <img src="/assets/cushki-logo(trans).svg" alt="Cushki Logo" className="logo-img" />
             </Link>
+            <div className="footer-icons">
+              {socialLinks.map((item, index) =>
+                item.href ? (
+                  <a
+                    key={index}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={item.label}
+                  >
+                    {item.icon}
+                  </a>
+                ) : (
+                  <Link key={index} to={item.to} aria-label={item.label}>
+                    {item.icon}
+                  </Link>
+                )
+              )}
+            </div>
           </div>
-          <div className="footer-icons">
-            {socialLinks.map((item, index) =>
-              item.href ? (
-                <a
-                  key={index}
-                  href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={item.label}
-                >
-                  {item.icon}
-                </a>
-              ) : (
-                <Link key={index} to={item.to} aria-label={item.label}>
-                  {item.icon}
-                </Link>
-              )
-            )}
-          </div>
+
           <p className="footer-tagline">
             Your Couch.<br />Their Kingdom.
           </p>

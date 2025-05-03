@@ -20,13 +20,11 @@ const Hero = () => {
       <div className="hero-content">
         <div className="hero-text">
           <h1>
-            Real play.<br />
-            Real moments.<br />
-            Real soft.
+            Built to Adapt.<br />
+            Styled to Stay.
           </h1>
           <p>
-            No screens. No limits. Just pure, hands-on play the way it used to be — 
-            softer, safer, and more fun.
+            Rearrange, relax, and reinvent your space — no instructions needed. From lounging to living, every piece moves with you.
           </p>
           <div className="hero-buttons">
             <Link to="/shop-classic" className="btn btn-primary">Shop Classic</Link>
