@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/Accordions.css';
 
 const accordionData = {
   Details: (
     <>
-      The Original Play Couch™, built for endless configurations. Featuring four foam pieces — a sturdy base, soft cushion, and two versatile triangle pillows — all wrapped in your choice of washable, durable fabric.
+      The Classic Couch, built for endless configurations. Featuring four foam pieces — a sturdy base, soft cushion, and two versatile triangle pillows — all wrapped in your choice of washable, durable fabric.
     </>
   ),
   Dimensions: (
@@ -24,10 +25,10 @@ const accordionData = {
   ),
   Care: (
     <ul>
-      <li>Remove covers and zip closed</li>
-      <li>Machine wash covers on coldest setting with like colors</li>
+      <li>Remove covers and zip up</li>
+      <li>Machine wash covers on coldest setting with colors</li>
       <li>Hang dry to prevent shrinking</li>
-      <li>See Care FAQs for full instructions</li>
+      <li><Link to="/faq?tab=care">See Care FAQs</Link> for full instructions</li>
     </ul>
   ),
   Certifications: (
@@ -40,12 +41,12 @@ const accordionData = {
   ),
   'Safety & Use': (
     <>
-      <p>The Playtime Playbook:</p>
+      <p>The Cosy Code:</p>
       <ul>
-        <li>Designed for ages 1+ for imagination, exploration, and adventure — not for sleeping!</li>
-        <li>Never place heavy items on top when someone is inside or underneath.</li>
-        <li>Use in open spaces, not near stairs, and with caution on hard surfaces.</li>
-        <li>Adult supervision required. See Safe and Proper Use Manual for details.</li>
+        <li>Built for ages 1 and up — perfect for curious minds and little explorers.</li>
+        <li>Don’t stack heavy stuff on top, especially if someone’s inside or under.</li>
+        <li>Use it in open areas, away from stairs. Be extra careful on hard floors.</li>
+        <li>Always keep an eye out — adult supervision is a must. Check out the <Link to="/safety">Safe Disclaimer</Link> for all the details.</li>
       </ul>
     </>
   ),

@@ -12,7 +12,7 @@ const colors = {
     description: 'A serene, dreamy blue in double-brushed microsuede that brings calm and joy to any space',
     variantId: '50582549168448',
     fabric: 'Double-brushed Microsuede',
-    stock: 1, // 👈 Add this
+    stock: 1, 
   },
   Grey: {
     hex: '#A8A8A8',
@@ -21,7 +21,7 @@ const colors = {
     description: 'A versatile, modern grey in double-brushed microsuede that pairs effortlessly with any mood or style.',
     variantId: '50579798393152',
     fabric: 'Double-brushed Microsuede',
-    stock: 2, // 👈 Add this
+    stock: 2, 
   },
   Pink: {
     hex: '#FFC5D3',
@@ -30,7 +30,7 @@ const colors = {
     description: 'A soft, warm blush pink in double-brushed microsuede made for sweet moments and cozy corners.',
     variantId: '50579798327616',
     fabric: 'Double-brushed Microsuede',
-    stock: 3, // 👈 Add this
+    stock: 3, 
   },
 };
 
@@ -135,9 +135,9 @@ const ProductPage = ({ addToCart }) => {
 
           <div className="free-shipping">
             Free Shipping &{' '}
-            <a href="#" className="returns-link">
+            <Link to="/Pod" className="returns-link">
               30-day Returns
-            </a>
+            </Link>{' '}
           </div>
         </div>
       </div>

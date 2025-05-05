@@ -51,7 +51,7 @@ const ReviewsSection = () => {
   return (
     <section className="reviews-section" aria-labelledby="reviews-title">
       <div className="reviews-heading">
-        <h2 id="reviews-title">What Our Cushki™ Families Are Saying</h2>
+        <h2 id="reviews-title">What Our Cushki Families Are Saying</h2>
         <p>Real reviews from real families who made the leap</p>
       </div>
 

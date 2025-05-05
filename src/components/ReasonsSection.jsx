@@ -14,32 +14,32 @@ const reasons = [
   },
   {
     title: "For Preschools",
-    text: "Creative play that encourages collaboration, motor skills, and endless imagination.",
+    text: "Creative setups that foster collaboration, motor skills, and joy.",
     image: "/assets/preschool.jpg",
   },
   {
     title: "For Kindergartens",
-    text: "Soft, safe pieces that inspire active learning, balancing, and social interaction.",
+    text: "Soft, safe pieces that inspire active learning and social interaction.",
     image: "/assets/kindergarten.jpg",
   },
   {
     title: "For Paw-rents",
-    text: "A comfy playground for little paws — roll, climb, or nap in style.",
+    text: "A cozy playground for little paws — roll, climb, or nap in style.",
     image: "/assets/pawrent.jpg",
   },
   {
     title: "For Small Spaces",
-    text: "Transform tight spaces into dynamic play zones, easily packed away after fun.",
+    text: "Transform tight corners into dynamic zones, easily packed away.",
     image: "/assets/smallspace.jpg",
   },
   {
     title: "For Big Families",
-    text: "Enough pieces for group play, teamwork, and giant fort-building missions.",
+    text: "Enough pieces for group bonding, builds, and teamwork.",
     image: "/assets/bigfamily.jpg",
   },
   {
     title: "For Gifting",
-    text: "The ultimate gift: a play space, furniture piece, and imagination hub in one.",
+    text: "A gift that’s thoughtful, functional, and fun.",
     image: "/assets/gifting.jpg",
   },
 ];
@@ -48,8 +48,8 @@ const ReasonsSection = () => {
   return (
     <section className="reasons-section">
       <div className="reasons-heading">
-        <h2>Endless Reasons to Play with Cushki™</h2>
-        <p>Imagination has no age. Cushki™ is for everyone.</p>
+        <h2>Comfort for Every Stage of Life</h2>
+        <p>From playtime to downtime — always the right fit.</p>
       </div>
 
       <div className="reasons-grid">
@@ -57,11 +57,13 @@ const ReasonsSection = () => {
           <div
             key={title}
             className="reason-card"
-            style={{ "--hover-bg": `url(${image})` }}
+            style={{ backgroundImage: `url(${image})` }}
           >
-            <h3>{title}</h3>
-            <p>{text}</p>
-            <div className="reason-hover-hint">Hover to discover!</div>
+            <div className="reason-content">
+              <h3>{title}</h3>
+              <p>{text}</p>
+              <div className="reason-hover-hint">Hover to discover!</div>
+            </div>
           </div>
         ))}
       </div>

@@ -28,7 +28,7 @@
 
 /* Review Card */
 .review-card {
-    background-color: #e0e0e0;
+    background-color: var(--color-background);
     border-radius: 1rem;
     padding: 2rem;
     height: 300px;

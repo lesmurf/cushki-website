@@ -1,11 +1,11 @@
 /* Section Layout */
 .reasons-section {
     background-color: var(--color-background-secondary, #f9f9f9);
-    padding: 3rem 2rem;
+    padding: 2rem 1.5rem;
     text-align: center;
 }
 
-/* Heading */
+/* Headings */
 .reasons-heading h2 {
     font-size: 2rem;
     font-family: var(--font-heading, sans-serif);
@@ -17,131 +17,90 @@
     font-size: 1.1rem;
     font-family: var(--font-body, sans-serif);
     color: var(--color-text-secondary, #555);
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
 }
 
-/* Responsive Grid */
+/* Grid Layout */
 .reasons-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    /* 2 cols on mobile */
-    gap: 2rem;
+    gap: 1rem;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Medium screen: 3 columns */
 @media (min-width: 640px) {
     .reasons-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-/* Large screen: 4 columns */
 @media (min-width: 1024px) {
     .reasons-grid {
         grid-template-columns: repeat(4, 1fr);
     }
 }
 
-/* Card Structure */
+/* Card Base */
 .reason-card {
-    background-color: var(--color-background, #ececec);
-    border-radius: 1rem;
-    padding: 1.5rem;
-    height: 240px;
-    overflow: hidden;
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
+    height: 170px;
+    border-radius: 1rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     transition: all 0.4s ease;
-    min-width: 0;
-    word-wrap: break-word;
+    overflow: hidden;
+    border: 2px solid rgba(0, 0, 0, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Hover Background Layer */
-.reason-card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: var(--hover-bg) center/cover no-repeat;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    z-index: 1;
-}
-
-/* Overlay Layer */
+/* Overlay */
 .reason-card::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.4);
     opacity: 0;
-    transition: opacity 0.4s ease;
-    z-index: 2;
+    transition: opacity 0.3s ease;
+    z-index: 1;
 }
 
-/* Hover Activation */
-.reason-card:hover::before,
 .reason-card:hover::after {
     opacity: 1;
 }
 
-/* Text Layer */
-.reason-card h3,
-.reason-card p {
+/* Content */
+.reason-content {
     position: relative;
-    z-index: 3;
+    z-index: 2;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    padding: 1rem;
 }
 
-.reason-card h3 {
+.reason-card:hover .reason-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reason-content h3 {
     font-size: 1.1rem;
+    font-weight: bold;
     font-family: var(--font-heading, sans-serif);
-    color: var(--color-text, #000);
-    margin-bottom: 0.75rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 }
 
-.reason-card p {
+.reason-content p {
     font-size: 0.95rem;
     font-family: var(--font-body, sans-serif);
-    color: var(--color-text-secondary, #555);
-}
-
-/* On hover, text turns white */
-.reason-card:hover h3,
-.reason-card:hover p {
-    color: white;
-}
-
-/* Hint Text */
-.reason-hover-hint {
-    font-size: 0.75rem;
-    font-family: var(--font-body, sans-serif);
-    color: var(--color-text-secondary, #888);
-    margin-top: 0.5rem;
-    position: relative;
-    z-index: 3;
-    transition: opacity 0.3s ease;
-}
-
-.reason-card:hover .reason-hover-hint {
-    opacity: 0;
-}
-
-/* Optional tweaks for very small screens */
-@media (max-width: 380px) {
-    .reason-card {
-        padding: 1rem;
-        height: 200px;
-    }
-
-    .reason-card h3 {
-        font-size: 1rem;
-    }
-
-    .reason-card p {
-        font-size: 0.85rem;
-    }
+    color: #f1f1f1;
+    line-height: 1.4;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }

@@ -53,7 +53,7 @@ const Footer = () => {
         <div className="footer-left">
           <div className="footer-brand">
             <Link to="/" className="footer-logo">
-              <img src="/assets/cushki-logo(trans).svg" alt="Cushki Logo" className="logo-img" />
+              <img src="/assets/cushki-logo.svg" alt="Cushki Logo" className="logo-img" />
             </Link>
             <div className="footer-icons">
               {socialLinks.map((item, index) =>
@@ -97,7 +97,7 @@ const Footer = () => {
       {/* Bottom Section: Copyright only */}
       <div className="footer-bottom">
         <p className="footer-copy">
-          © 2025 CUSHKI. Designed for Play in Singapore.
+          © 2025 CUSHKI. Designed for Comfort in Singapore.
         </p>
       </div>
     </footer>

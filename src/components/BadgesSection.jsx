@@ -14,9 +14,9 @@ const BadgesSection = () => {
   return (
     <section className="badges-section">
       <div className="badges-heading">
-        <h2>Built for Play. Trusted by Parents.</h2>
+        <h2>Built for Play. Trusted by Everyone.</h2>
         <p>
-          Thousands of playful hours and counting — discover why families love Cushki™.
+          The features that make families choose us, again and again.
         </p>
       </div>
 
