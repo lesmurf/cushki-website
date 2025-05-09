@@ -33,6 +33,34 @@ const colors = {
     fabric: 'Double-brushed Microsuede',
     stock: 8, 
   },
+  Grey: {
+    hex: '#f5f5dc',
+    image: '/assets/colorToImageProduct/blue1.png',
+    name: 'Grey',
+    description: 'A soft, neutral beige that feels cozy and grounding.',
+    variantId: '50582547366208',
+    fabric: 'Corduroy',
+    stock: 0, 
+
+  },
+  DarkBlue: {
+    hex: '#a0522d',
+    image: '/assets/colorToImageProduct/brown1.png',
+    name: 'DarkBlue',
+    description: 'A warm, chocolatey brown for bold yet soothing vibes.',
+    variantId: '50582547398976',
+    fabric: 'Corduroy',
+    stock: 1, 
+  },
+  BabyPurple: {
+    hex: '#8FBC8F',
+    image: '/assets/colorToImageProduct/green1.png',
+    name: 'BabyPurple',
+    description: 'A lush moss green that brings the outdoors inside.',
+    variantId: '50582547431744',
+    fabric: 'Corduroy',
+    stock: 0, 
+  },
 };
 
 const PodPage = ({ addToCart }) => {
@@ -78,7 +106,7 @@ const PodPage = ({ addToCart }) => {
           <p className="price">$389</p>
 
           <div className="fabric-filter">
-            {['All', 'Double-brushed Microsuede'].map((fabric) => (
+            {['All', 'Double-brushed Microsuede', 'Corduroy'].map((fabric) => (
               <button
                 key={fabric}
                 onClick={() => handleFabricChange(fabric)}

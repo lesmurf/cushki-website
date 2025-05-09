@@ -32,6 +32,33 @@ const colors = {
     fabric: 'Double-brushed Microsuede',
     stock: 3, 
   },
+    Purple: {
+    hex: '#FFC5D3',
+    image: '/assets/colorToImageProduct/yellow1.png',
+    name: 'Purple',
+    description: 'A soft, warm blush pink in double-brushed microsuede made for sweet moments and cozy corners.',
+    variantId: '50579798327616',
+    fabric: 'Corduroy',
+    stock: 0, 
+  },
+    Green: {
+    hex: '#FFC5D3',
+    image: '/assets/colorToImageProduct/yellow1.png',
+    name: 'Green',
+    description: 'A soft, warm blush pink in double-brushed microsuede made for sweet moments and cozy corners.',
+    variantId: '50579798327616',
+    fabric: 'Corduroy',
+    stock: 0, 
+  },
+    BabyGrey: {
+    hex: '#FFC5D3',
+    image: '/assets/colorToImageProduct/yellow1.png',
+    name: 'BabyGrey',
+    description: 'A soft, warm blush pink in double-brushed microsuede made for sweet moments and cozy corners.',
+    variantId: '50579798327616',
+    fabric: 'Corduroy',
+    stock: 0, 
+  },
 };
 
 const ProductPage = ({ addToCart }) => {
@@ -73,12 +100,12 @@ const ProductPage = ({ addToCart }) => {
           className="product-image"
         />
         <div className="product-info">
-          <h1>The Cushki™ Classic</h1>
+          <h1>The Cushki Classic</h1>
           <p className="price">$489</p>
 
           {/* Fabric Filter */}
           <div className="fabric-filter">
-            {['All', 'Double-brushed Microsuede'].map((fabric) => (
+            {['All', 'Double-brushed Microsuede', 'Corduroy'].map((fabric) => (
               <button
                 key={fabric}
                 onClick={() => handleFabricChange(fabric)}

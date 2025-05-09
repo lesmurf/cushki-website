@@ -57,9 +57,6 @@ const Terms = () => {
       <h2>Defective or Incorrect Items</h2>
       <p>We inspect every order. If you receive a faulty or wrong item, contact us immediately. Exchanges depend on availability. Sale items are final and not eligible for return/exchange.</p>
 
-      <h2>E-Vouchers & Gift Cards</h2>
-      <p>Issued in SGD, non-transferable, non-redeemable for cash, and valid for 1 year. Treat like cash.</p>
-
       <h2>Store Credits</h2>
       <p>Issued in SGD, valid for 180 days. Not redeemable for cash or transferable.</p>
 

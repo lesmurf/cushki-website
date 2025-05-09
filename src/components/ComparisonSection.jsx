@@ -8,7 +8,7 @@ const products = [
     image: '/assets/heroSlideshow/2.png',
     features: [
       '4-piece modular sofa',
-      'Perfect for building forts',
+      'Made for creating anything your mind dreams up.',
       'Stackable & easy to store',
       'Soft, durable microsuede covers',
     ],
@@ -20,10 +20,10 @@ const products = [
     name: 'Cushki Pod™',
     image: '/assets/heroSlideshow/2.png',
     features: [
-      'Round modular arches',
-      'Great for balancing, rolling, climbing',
-      'Double-duty as seesaw or crawl space',
-      'Stackable for creative play',
+      '4-piece modular sofa',
+      'Soft, stackable round arches',
+      'Flip it, stack it, roll it',
+      'From table to nap spot. It adapts to you.',
     ],
     buttonText: 'SHOP POD™',
     route: '/pod', // ✅ Replace with your actual route
@@ -35,8 +35,8 @@ const ComparisonSection = () => {
   return (
     <section className="comparison-section">
       <div className="comparison-heading">
-        <h2>Which Cushki™ is Right for You?</h2>
-        <p>Compare the Classic and Chunk — you're minutes away from playtime!</p>
+        <h2>Which Cushki is Right for You?</h2>
+        <p>Compare the Classic and Pod — you're minutes away from your next cosy corner!</p>
       </div>
 
       <div className="comparison-cards">
