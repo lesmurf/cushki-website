@@ -5,30 +5,69 @@
     margin: 0 auto;
 }
 
-/* === Top Layout === */
-.product-top {
+/* === Main Layout === */
+.product-main {
     display: flex;
-    gap: 2rem;
-    margin-bottom: 3rem;
+    justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
+    gap: 2rem;
 }
 
-.product-image {
-    flex: 0.6;
-    max-width: 700px;
-    width: 100%;
+/* === Image Gallery === */
+.product-gallery {
+    position: relative;
+    flex: 1 1 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border-radius: 1rem;
+    overflow: hidden;
 }
 
-.product-image img {
-    width: 100%;
-    height: auto;
+.main-product-image {
+    max-width: 100%;
+    max-height: 650px;
     object-fit: contain;
     border-radius: 1rem;
 }
 
-.product-info {
-    flex: 0.4;
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2.5rem;
+    background: rgba(255, 255, 255, 0.7);
+    border: none;
+    cursor: pointer;
+    color: black;
+    padding: 0.5rem 1rem;
+    z-index: 10;
+    transition: background-color 0.3s;
+    border-radius: 0.5rem;
+}
+
+.nav-arrow:hover {
+    background: white;
+}
+
+.nav-arrow.left {
+    left: 1rem;
+}
+
+.nav-arrow.right {
+    right: 1rem;
+}
+
+/* === Info Panel === */
+.product-info-panel {
+    flex: 1 1 35%;
+    max-width: 420px;
+    background-color: var(--color-background);
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -161,21 +200,47 @@
     color: var(--color-accent);
 }
 
-/* === Mobile Responsive === */
+/* === Thumbnails (optional if using later) === */
+.thumbnail-row {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    justify-content: center;
+}
+
+.thumbnail {
+    width: 60px;
+    height: auto;
+    cursor: pointer;
+    opacity: 0.6;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    transition: 0.2s ease;
+}
+
+.thumbnail.active {
+    opacity: 1;
+    border-color: #000;
+}
+
+/* === Responsive === */
 @media (max-width: 768px) {
-    .product-top {
+    .product-main {
         flex-direction: column;
         align-items: center;
     }
 
-    .product-image {
-        max-width: 90%;
+    .product-gallery {
+        width: 100%;
     }
 
-    .product-info {
+    .main-product-image {
+        max-height: 400px;
+    }
+
+    .product-info-panel {
         width: 100%;
-        padding: 0 1rem;
-        gap: 1rem;
+        padding: 1.5rem;
     }
 
     .price {

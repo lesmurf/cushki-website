@@ -6,7 +6,7 @@ const ProductFeatures = () => {
     <section className="features-grid" role="region" aria-label="Product Features">
       
       <article className="feature-item">
-        <img src="/assets/productDetails/zipper.png" alt="Custom zipper garage for safety" />
+        <img src="/assets/productFeatures/zipper1.png" alt="Custom zipper garage for safety" />
         <div className="feature-text">
           <h4>Park it right here</h4>
           <p>
@@ -22,11 +22,11 @@ const ProductFeatures = () => {
             Designed to feel good and look better. Rounded, textured, and built for smooth glides and comfy grips.
           </p>
         </div>
-        <img src="/assets/productDetails/zipperplus.png" alt="Textured rounded zipper for easy grip" />
+        <img src="/assets/productFeatures/zipper2.png" alt="Textured rounded zipper for easy grip" />
       </article>
 
       <article className="feature-item">
-        <img src="/assets/productDetails/stylish.png" alt="Flat woven handles on cushions" />
+        <img src="/assets/productFeatures/stylish.png" alt="Flat woven handles on cushions" />
         <div className="feature-text">
           <h4>Handles that don’t scream "handle"</h4>
           <p>
