@@ -43,8 +43,8 @@ const Navbar = ({ cartCount, onCartClick }) => {
       label: 'Accessories',
       key: 'accessories',
       links: [
-        { path: '#', label: 'Pillows' },
-        { path: '#', label: 'Extra Cushions' },
+        { path: '#', label: '' },
+        { path: '#', label: '' },
       ],
     },
     {

@@ -6,57 +6,99 @@ import PodAccordions from '../components/PodAccordions';
 
 const colors = {
   Beige: {
-    hex: '#f5f5dc',
-    images: ['/assets/podImages/CPbeige1.png','/assets/podImages/CPbeige2.png'],
-    name: 'Sandstone',
-    description: 'A soft, neutral beige that feels cozy and grounding.',
+    hex: '#D6C5A8',
+    images: [
+      '/assets/podImages/CPbeige1.png',
+      '/assets/podImages/CPbeige2.png',
+    ],
+    name: 'Oat',
+    description: 'A creamy oat beige that brings softness and simplicity to any space. Calm, cozy, and quietly elegant — made to blend in, but never disappear.',
     variantId: '50582547366208',
     fabric: 'Double-brushed Microsuede',
     stock: 2,
   },
-  Brown: {
-    hex: '#D3D3D3',
-    images: ['/assets/podImages/CPgrey1.png','/assets/podImages/CPgrey2.png'],
-    name: 'Cocoacalm',
-    description: 'A warm, chocolatey brown for bold yet soothing vibes.',
+  DarkGrey: {
+    hex: '#4A4A4A',
+    images: [
+      '/assets/podImages/CPdarkgrey1.png',
+      '/assets/podImages/CPdarkgrey2.png',
+    ],
+    name: 'Slatehug',
+    description: 'A rich charcoal grey that wraps your space in calm and comfort. Minimal, modern, and quietly strong — built to ground any room with effortless style.',
     variantId: '50582547398976',
     fabric: 'Double-brushed Microsuede',
     stock: 8,
   },
   Green: {
-    hex: '#344334',
-    images: ['/assets/podImages/CPmoss1.png','/assets/podImages/CPmoss2.png'],
-    name: 'Mossmelt',
-    description: 'A lush moss green that brings the outdoors inside.',
+    hex: '#6E9B89',
+    images: [
+      '/assets/podImages/CPgreen1.png',
+      '/assets/podImages/CPgreen2.png',
+    ],
+    name: 'Sagemelt',
+    description: 'A muted sage green with a hint of grey, Sagemelt brings the quiet calm of nature indoors. Soft, grounding, and endlessly versatile — it’s the color of slow mornings, cozy moments, and intentional play.',
     variantId: '50582547431744',
     fabric: 'Double-brushed Microsuede',
     stock: 8,
   },
   Grey: {
-    hex: '#f5f5dc',
-    images: ['/assets/colorToImageProduct/blue1.png'],
-    name: 'Grey',
-    description: 'A soft, neutral beige that feels cozy and grounding.',
+    hex: '#A8A8A8',
+    images: [
+      '/assets/podImages/CPgrey1.png',
+      '/assets/podImages/CPgrey2.png',
+    ],
+    name: 'Stonecloud',
+    description: 'A versatile, modern grey in double-brushed microsuede that pairs effortlessly with any mood or style.',
     variantId: '50582547366208',
-    fabric: 'Corduroy',
+    fabric: 'Double-brushed Microsuede',
     stock: 0,
   },
-  DarkBlue: {
-    hex: '#a0522d',
-    images: ['/assets/colorToImageProduct/brown1.png'],
-    name: 'DarkBlue',
-    description: 'A warm, chocolatey brown for bold yet soothing vibes.',
+  Navy: {
+    hex: '#4A6B8A',
+    images: [
+      '/assets/podImages/CPnavy1.png',
+      '/assets/podImages/CPnavy2.png',
+    ],
+    name: 'SnugMarine',
+    description: 'A deep, stormy blue that evokes crashing waves and calm strength. Bold yet grounding — perfect for making a statement that still feels serene.',
+    variantId: '50582547431744',
+    fabric: 'Double-brushed Microsuede',
+    stock: 0,
+  },
+  Moss: {
+    hex: '#344334',
+    images: [
+      '/assets/podImages/CPmoss1.png',
+      '/assets/podImages/CPmoss2.png',
+    ],
+    name: 'Mossmelt',
+    description: 'A deep moss green inspired by forest trails and quiet hideouts. Earthy and elegant, Mossmelt brings the outdoors in — perfect for grounded play and peaceful lounging.',
     variantId: '50582547398976',
-    fabric: 'Corduroy',
+    fabric: 'Double-brushed Microsuede',
     stock: 1,
   },
-  BabyPurple: {
-    hex: '#8FBC8F',
-    images: ['/assets/colorToImageProduct/green1.png'],
-    name: 'BabyPurple',
-    description: 'A lush moss green that brings the outdoors inside.',
+  PastelBlue: {
+    hex: '#C7DDE0',
+    images: [
+      '/assets/podImages/CPpastelblue1.png',
+      '/assets/podImages/CPpastelblue2.png',
+    ],
+    name: 'Skywhisper',
+    description: 'A serene, dreamy blue in double-brushed microsuede that brings calm and joy to any space',
     variantId: '50582547431744',
-    fabric: 'Corduroy',
+    fabric: 'Double-brushed Microsuede',
+    stock: 0,
+  },
+  Red: {
+    hex: '#ED4C3A',
+    images: [
+      '/assets/podImages/CPred1.png',
+      '/assets/podImages/CPred2.png',
+    ],
+    name: 'Cherrywhirl',
+    description: 'A bold cherry red bursting with playful energy. Cherrywhirl makes any space feel alive — perfect for sparking joy, igniting imagination, and turning everyday lounging into a statement moment.',
+    variantId: '50582547431744',
+    fabric: 'Double-brushed Microsuede',
     stock: 0,
   },
 };
@@ -129,7 +171,7 @@ const PodPage = ({ addToCart }) => {
           <p className="price">$389</p>
 
           <div className="fabric-filter">
-            {['All', 'Double-brushed Microsuede', 'Corduroy'].map((fabric) => (
+            {['All', 'Double-brushed Microsuede'].map((fabric) => (
               <button
                 key={fabric}
                 onClick={() => handleFabricChange(fabric)}

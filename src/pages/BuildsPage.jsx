@@ -2,14 +2,22 @@ import React from 'react';
 import '../styles/BuildsPage.css';
 
 const buildImages = [
-  { src: '/assets/colorToImageProduct/blue1.png', alt: 'Build Example 1' },
-  { src: '/assets/colorToImageProduct/blue1.png', alt: 'Build Example 2' },
-  { src: '/assets/colorToImageProduct/blue1.png', alt: 'Build Example 3' },
-  { src: '/assets/colorToImageProduct/blue1.png', alt: 'Build Example 4' },
-  { src: '/assets/colorToImageProduct/blue1.png', alt: 'Build Example 5' },
-  { src: '/assets/colorToImageProduct/blue1.png', alt: 'Build Example 6' },
-  { src: '/assets/colorToImageProduct/blue1.png', alt: 'Build Example 7' },
-  { src: '/assets/colorToImageProduct/blue1.png', alt: 'Build Example 8' },
+  { src: '/assets/heroSlideshow/1.png', alt: 'Build Example 1' },
+  { src: '/assets/heroSlideshow/2.png', alt: 'Build Example 2' },
+  { src: '/assets/heroSlideshow/3.png', alt: 'Build Example 3' },
+  { src: '/assets/heroSlideshow/4.png', alt: 'Build Example 4' },
+  { src: '/assets/heroSlideshow/5.png', alt: 'Build Example 5' },
+  { src: '/assets/heroSlideshow/6.png', alt: 'Build Example 6' },
+  { src: '/assets/heroSlideshow/7.png', alt: 'Build Example 7' },
+  { src: '/assets/heroSlideshow/8.png', alt: 'Build Example 8' },
+  { src: '/assets/heroSlideshow/9.png', alt: 'Build Example 4' },
+  { src: '/assets/heroSlideshow/10.png', alt: 'Build Example 5' },
+  { src: '/assets/heroSlideshow/11.png', alt: 'Build Example 6' },
+  { src: '/assets/heroSlideshow/12.png', alt: 'Build Example 7' },
+  { src: '/assets/heroSlideshow/13.png', alt: 'Build Example 8' },
+  { src: '/assets/heroSlideshow/14.png', alt: 'Build Example 5' },
+  { src: '/assets/heroSlideshow/15.png', alt: 'Build Example 6' },
+  { src: '/assets/heroSlideshow/16.png', alt: 'Build Example 7' },
 ];
 
 const BuildsPage = () => {

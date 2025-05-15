@@ -5,7 +5,7 @@ import ClassicLinerAccordions from '../components/ClassicLinerAccordions';
 const liner = {
   hex: '#A8A8A8',
   image: '/assets/classicLinerImage/classicLiner.png',
-  name: 'Liner Set',
+  name: 'Classic Liner Set',
   description: 'Non-toxic waterproof material to provide maximum protection for each piece',
   variantId: '50582950209600',
 };

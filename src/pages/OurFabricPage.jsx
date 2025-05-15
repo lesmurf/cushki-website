@@ -13,7 +13,7 @@ const OurFabricPage = () => {
           ultra-durable, and made for a life of fun moments (and occasional juice spills).
         </p>
         <img
-          src="/assets/colorToImageProduct/blue1.png"
+          src="/assets/classicImages/CCnavy1.png"
           alt="Our Fabric Sample"
           className="fabric-hero-image"
         />
@@ -37,7 +37,7 @@ const OurFabricPage = () => {
       <section className="fabric-feature">
         <h2>Double-Brushed Microsuede</h2>
         <img
-          src="/assets/fabricDetails.png"
+          src="/assets/fabricImages/fabric.png"
           alt="Microsuede Details"
           className="fabric-feature-image"
         />

@@ -5,7 +5,7 @@ import '../styles/ComparisonSection.css';
 const products = [
   {
     name: 'Cushki Classic',
-    image: '/assets/heroSlideshow/2.png',
+    image: '/assets/comparisonImages/CCpastelblue.png',
     features: [
       '4-piece modular sofa',
       'Made for creating anything your mind dreams up.',
@@ -18,7 +18,7 @@ const products = [
   },
   {
     name: 'Cushki Pod™',
-    image: '/assets/heroSlideshow/2.png',
+    image: '/assets/comparisonImages/CPmossgreen.png',
     features: [
       '4-piece modular sofa',
       'Soft, stackable round arches',

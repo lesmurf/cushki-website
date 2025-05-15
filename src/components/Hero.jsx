@@ -5,15 +5,25 @@ import '../styles/Hero.css';
 
 const Hero = () => {
   const images = [
+    '/assets/heroSlideshow/1.png',
     '/assets/heroSlideshow/2.png',
     '/assets/heroSlideshow/3.png',
     '/assets/heroSlideshow/4.png',
     '/assets/heroSlideshow/5.png',
     '/assets/heroSlideshow/6.png',
     '/assets/heroSlideshow/7.png',
+    '/assets/heroSlideshow/8.png',
+    '/assets/heroSlideshow/9.png',
+    '/assets/heroSlideshow/10.png',
+    '/assets/heroSlideshow/11.png',
+    '/assets/heroSlideshow/12.png',
+    '/assets/heroSlideshow/13.png',
+    '/assets/heroSlideshow/14.png',
+    '/assets/heroSlideshow/15.png',
+    '/assets/heroSlideshow/16.png',
   ];
 
-  const currentImage = useImageSlideshow(images, 1500);
+  const currentImage = useImageSlideshow(images, 500);
 
   return (
     <section className="hero">
