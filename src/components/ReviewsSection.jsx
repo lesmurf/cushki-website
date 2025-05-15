@@ -7,21 +7,21 @@ import 'slick-carousel/slick/slick-theme.css';
 
 const reviews = [
   {
-    name: 'Jasmine S.',
+    name: 'Jennifer Neo',
     title: 'Best purchase',
     review:
       "My boys love their nugget couch since we've unpacked it! Best purchase ever. Great quality and love that the covers are machine washable.",
     rating: 5,
   },
   {
-    name: 'Brian J.',
+    name: 'Wan Ting',
     title: 'Nugget in the play room',
     review:
       'Imaginative, well made product. A 3 year old and an 18 month old dove on the cushions, as soon as it was unwrapped, and continually went over and through the various configurations the adults set up. A WINNER.',
     rating: 5,
   },
   {
-    name: 'Sophia T.',
+    name: 'Alan Tan',
     title: 'Highly Recommend',
     review:
       'Bought it for my twins — they have not stopped playing! Beautiful colors, soft material, durable foam.',
