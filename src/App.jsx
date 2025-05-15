@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ScrollToTop from "./components/ScrollToTop";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
@@ -127,6 +128,7 @@ function App() {
       <Navbar cartCount={totalCartQuantity} onCartClick={openMiniCart} />
 
       <div className="page-content">
+      <ScrollToTop />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/shop-classic" element={<ProductPage addToCart={addToCart} />} />
