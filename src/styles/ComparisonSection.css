@@ -1,117 +1,113 @@
-/* Comparison Section */
 .comparison-section {
-    background-color: var(--color-background, #f9f9f9);
-    padding: 3rem 2rem;
-    text-align: center;
+    padding: 0 1.25rem;
+    /* Adds left and right padding */
 }
 
-/* Heading */
+@media (min-width: 768px) {
+    .comparison-section {
+        padding: 0 2rem;
+        /* More breathing room on larger screens */
+    }
+}
+
+.comparison-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    max-width: 1100px;
+    margin-inline: auto;
+}
+
+.comparison-card {
+    background-color: var(--color-background-secondary, #f0e8dd);
+    border-radius: 1.25rem;
+    padding: 1.75rem 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s ease;
+}
+
+.comparison-heading {
+    max-width: 700px;
+    margin: 0 auto 2.5rem auto;
+    text-align: center;
+    padding: 0 1rem;
+}
+
 .comparison-heading h2 {
     font-family: var(--font-heading, sans-serif);
     font-size: 2rem;
+    font-weight: 700;
     color: var(--color-text, #000);
+    margin-bottom: 0.5rem;
 }
 
 .comparison-heading p {
     font-family: var(--font-body, sans-serif);
+    font-size: 1rem;
     color: var(--color-text-secondary, #555);
-    margin-top: 0.5rem;
+    margin: 0;
 }
 
-/* Cards Container */
-.comparison-cards {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin-top: 3rem;
-    max-width: 1100px;
-    margin-left: auto;
-    margin-right: auto;
+.comparison-card:hover {
+    transform: translateY(-3px);
 }
 
-/* Individual Card */
-.comparison-card {
-    background-color: var(--color-background-secondary);
-    border-radius: 1rem;
-    padding: 1.5rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    flex: 1;
-    min-height: 420px;
-    max-width: 500px;
-}
-
-/* Card Image */
 .comparison-card img {
-    width: 80%;
+    width: 70%;
+    max-width: 160px;
     height: auto;
-    object-fit: contain;
+    margin-bottom: 1rem;
 }
 
-/* Card Title */
 .comparison-card h3 {
     font-family: var(--font-heading, sans-serif);
-    color: var(--color-text, #000);
-    margin-top: 1rem;
-}
-
-/* Card Features */
-.comparison-card ul {
-    list-style: none;
-    padding: 0;
-    margin: 1rem 0;
-    font-family: var(--font-body, sans-serif);
-    color: var(--color-text-secondary, #555);
-}
-
-.comparison-card li {
+    font-size: 1.2rem;
     margin-bottom: 0.5rem;
 }
 
-/* Buttons */
+.comparison-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.75rem 0 1rem;
+    font-family: var(--font-body, sans-serif);
+    font-size: 0.95rem;
+    color: var(--color-text-secondary, #555);
+    text-align: center;
+}
+
+.comparison-card li {
+    margin-bottom: 0.4rem;
+}
+
 .comparison-button {
-    margin-top: 1rem;
+    margin-top: auto;
     padding: 0.75rem 1.5rem;
-    background-color: var(--color-primary);
-    color: #f9f9f9;
+    background-color: var(--color-primary, #000);
+    color: #fff;
     border: none;
     border-radius: 999px;
-    font-family: var(--font-body, sans-serif);
-    font-weight: bold;
-    font-size: 0.9rem;
+    font-weight: 600;
     text-decoration: none;
+    font-size: 0.85rem;
     transition: background-color 0.3s ease;
 }
 
-.comparison-button:hover,
-.comparison-button:focus {
-    background-color: var(--color-primary-hover);
-    color: #f9f9f9;
-    outline: none;
+.comparison-button:hover {
+    background-color: var(--color-primary-hover, #222);
 }
 
-/* Secondary Button (optional style) */
 .comparison-button.secondary {
     background-color: transparent;
-    border: 2px solid var(--color-primary);
-    color: var(--color-primary-hover);
+    color: var(--color-primary, #000);
+    border: 2px solid var(--color-primary, #000);
 }
 
-.comparison-button.secondary:hover,
-.comparison-button.secondary:focus {
-    background-color: var(--color-primary-hover);
-    color: #f9f9f9;
-    border: 2px solid var(--color-primary-hover);
-}
-
-/* Desktop Layout */
-@media (min-width: 768px) {
-    .comparison-cards {
-        flex-direction: row;
-        justify-content: center;
-        align-items: stretch;
-    }
+.comparison-button.secondary:hover {
+    background-color: var(--color-primary-hover, #000);
+    color: #fff;
+    border-color: var(--color-primary-hover, #000);
 }
