@@ -7,26 +7,26 @@ const products = [
     name: 'Cushki Classic',
     image: '/assets/comparisonImages/CCpastelblue.png',
     features: [
-      '4-piece modular sofa',
-      'Made for creating anything your mind dreams up.',
-      'Stackable & easy to store',
-      'Soft, durable microsuede covers',
+      'The original, reimagined.',
+      '4 modular blocks — two bases, two triangles.',
+      'Made to grow with your imagination.',
+      'Best for: Bigger builds, structured play, everyday lounging.',
     ],
     buttonText: 'SHOP CLASSIC',
-    route: '/shop-classic', // ✅ Replace with your actual route
+    route: '/shop-classic',
     buttonStyle: 'comparison-button',
   },
   {
     name: 'Cushki Pod™',
     image: '/assets/comparisonImages/CPmossgreen.png',
     features: [
-      '4-piece modular sofa',
-      'Soft, stackable round arches',
-      'Flip it, stack it, roll it',
-      'From table to nap spot. It adapts to you.',
+      'Soft curves. Endless movement.',
+      '4 round stackable arches built for rolling, flipping, and flowing with your day.',
+      'From naptime to playtime, the Pod adapts',
+      'Best for: Open-ended play, small spaces, and doubling as a table.',
     ],
     buttonText: 'SHOP POD™',
-    route: '/pod', // ✅ Replace with your actual route
+    route: '/pod',
     buttonStyle: 'comparison-button secondary',
   },
 ];
@@ -35,7 +35,7 @@ const ComparisonSection = () => {
   return (
     <section className="comparison-section">
       <div className="comparison-heading">
-        <h2>Which Cushki is Right for You?</h2>
+        <h2>Find Your Perfect Fit.</h2>
         <p>Compare the Classic and Pod — you're minutes away from your next cosy corner!</p>
       </div>
 
