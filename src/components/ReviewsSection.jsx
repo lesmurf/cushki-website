@@ -15,7 +15,7 @@ const reviews = [
   },
   {
     name: 'Wan Ting',
-    title: 'Nugget in the play room',
+    title: 'AN OUTDOOR PLAYGROUND in the play room??',
     review:
       'Imaginative, well made product. A 3 year old and an 18 month old dove on the cushions, as soon as it was unwrapped, and continually went over and through the various configurations the adults set up. A WINNER.',
     rating: 5,
