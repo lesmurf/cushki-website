@@ -13,9 +13,9 @@ const colors = {
     ],
     name: 'Skywhisper',
     description: 'A serene, dreamy blue in double-brushed microsuede that brings calm and joy to any space',
-    variantId: '50582549168448',
+    variantId: '50652116025664',
     fabric: 'Double-brushed Microsuede',
-    stock: 1,
+    stock: 10,
   },
   Grey: {
     hex: '#A8A8A8',
@@ -25,9 +25,9 @@ const colors = {
     ],
     name: 'Stonecloud',
     description: 'A versatile, modern grey in double-brushed microsuede that pairs effortlessly with any mood or style.',
-    variantId: '50579798393152',
+    variantId: '50652115992896',
     fabric: 'Double-brushed Microsuede',
-    stock: 2,
+    stock: 10,
   },
   PastelPink: {
     hex: '#FFB7A5',
@@ -39,7 +39,7 @@ const colors = {
     description: 'A soft, warm blush pink in double-brushed microsuede made for sweet moments and cozy corners.',
     variantId: '50652115960128',
     fabric: 'Double-brushed Microsuede',
-    stock: 3,
+    stock: 10,
   },
   Beige: {
     hex: '#D6C5A8',
@@ -51,7 +51,7 @@ const colors = {
     description: 'A creamy oat beige that brings softness and simplicity to any space. Calm, cozy, and quietly elegant — made to blend in, but never disappear.',
     variantId: '50652115927360',
     fabric: 'Double-brushed Microsuede',
-    stock: 0,
+    stock: 10,
   },
   DarkGrey: {
     hex: '#4A4A4A',
@@ -63,7 +63,7 @@ const colors = {
     description: 'A rich charcoal grey that wraps your space in calm and comfort. Minimal, modern, and quietly strong — built to ground any room with effortless style.',
     variantId: '50652115894592',
     fabric: 'Double-brushed Microsuede',
-    stock: 0,
+    stock: 10,
   },
   DarkGreen: {
     hex: '#344334',
@@ -75,7 +75,7 @@ const colors = {
     description: 'A deep moss green inspired by forest trails and quiet hideouts. Earthy and elegant, Mossmelt brings the outdoors in — perfect for grounded play and peaceful lounging.',
     variantId: '50652115861824',
     fabric: 'Double-brushed Microsuede',
-    stock: 0,
+    stock: 10,
   },
   Navy: {
     hex: '#4A6B8A',
@@ -87,7 +87,7 @@ const colors = {
     description: 'A deep, stormy blue that evokes crashing waves and calm strength. Bold yet grounding — perfect for making a statement that still feels serene.',
     variantId: '50652115829056',
     fabric: 'Double-brushed Microsuede',
-    stock: 0,
+    stock: 10,
   },
 };
 
