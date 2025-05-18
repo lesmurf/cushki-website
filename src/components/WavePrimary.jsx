@@ -10,7 +10,7 @@ const WavyPrimary = () => {
     >
       <path
         d="M0,80 C300,0 1140,180 1440,100 L1440,150 L0,150 Z"
-        fill="#e4dac5"
+        fill="#f2ecdb"
       />
     </svg>
   );

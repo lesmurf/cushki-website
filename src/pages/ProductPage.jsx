@@ -37,7 +37,7 @@ const colors = {
     ],
     name: 'Blushbeam',
     description: 'A soft, warm blush pink in double-brushed microsuede made for sweet moments and cozy corners.',
-    variantId: '50579798327616',
+    variantId: '50652115960128',
     fabric: 'Double-brushed Microsuede',
     stock: 3,
   },
@@ -49,7 +49,7 @@ const colors = {
     ],
     name: 'Oat',
     description: 'A creamy oat beige that brings softness and simplicity to any space. Calm, cozy, and quietly elegant — made to blend in, but never disappear.',
-    variantId: '50579798327616',
+    variantId: '50652115927360',
     fabric: 'Double-brushed Microsuede',
     stock: 0,
   },
@@ -61,7 +61,7 @@ const colors = {
     ],
     name: 'Slatehug',
     description: 'A rich charcoal grey that wraps your space in calm and comfort. Minimal, modern, and quietly strong — built to ground any room with effortless style.',
-    variantId: '50579798327616',
+    variantId: '50652115894592',
     fabric: 'Double-brushed Microsuede',
     stock: 0,
   },
@@ -73,7 +73,7 @@ const colors = {
     ],
     name: 'Mossmelt',
     description: 'A deep moss green inspired by forest trails and quiet hideouts. Earthy and elegant, Mossmelt brings the outdoors in — perfect for grounded play and peaceful lounging.',
-    variantId: '50579798327616',
+    variantId: '50652115861824',
     fabric: 'Double-brushed Microsuede',
     stock: 0,
   },
@@ -85,7 +85,7 @@ const colors = {
     ],
     name: 'SnugMarine',
     description: 'A deep, stormy blue that evokes crashing waves and calm strength. Bold yet grounding — perfect for making a statement that still feels serene.',
-    variantId: '50579798327616',
+    variantId: '50652115829056',
     fabric: 'Double-brushed Microsuede',
     stock: 0,
   },
@@ -209,7 +209,7 @@ const ProductPage = ({ addToCart }) => {
           </div>
 
           <div className="free-shipping">
-            Free Shipping & <Link to="/Pod" className="returns-link">30-day Returns</Link>
+            We Ship Free — Love it or <Link to="/Pod" className="returns-link">Get Your Money Back</Link>
           </div>
         </div>
       </div>

@@ -161,7 +161,7 @@
 
 /* === Bundle Promo === */
 .bundle-box {
-    background-color: #ffbb9e;
+    background-color: #ffd7c2;
     padding: 1rem;
     border-radius: 0.5rem;
     font-weight: bold;
@@ -181,8 +181,8 @@
 
 /* === Shipping Info === */
 .free-shipping {
-    background-color: var(--color-secondary);
-    color: white;
+    background-color: #E5EDE8;
+    color: var(--color-text);
     padding: 1rem;
     border-radius: 0.25rem;
     text-align: center;
@@ -192,7 +192,7 @@
 }
 
 .returns-link {
-    color: white;
+    color: var(--color-text);
     text-decoration: underline;
 }
 

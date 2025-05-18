@@ -98,6 +98,7 @@
 
 .comparison-button:hover {
     background-color: var(--color-primary-hover, #222);
+    color: #fff;
 }
 
 .comparison-button.secondary {
