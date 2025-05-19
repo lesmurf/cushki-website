@@ -22,7 +22,7 @@ const colors = {
     image: '/assets/classicCoverImages/CCpastelblue-cover.png',
     name: 'Skywhisper',
     description: 'A serene, dreamy blue in double-brushed microsuede that brings calm and joy to any space.',
-    variantId: '50582850502976',
+    variantId: '50652167569728',
   },
   DarkGrey: {
     hex: '#4A4A4A',
