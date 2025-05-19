@@ -7,7 +7,7 @@ const liner = {
   image: '/assets/classicLinerImage/classicLiner.png',
   name: 'Classic Liner Set',
   description: 'Non-toxic waterproof material to provide maximum protection for each piece',
-  variantId: '50582950209600',
+  variantId: '9789409231168',
 };
 
 const price = 88;

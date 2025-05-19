@@ -51,7 +51,7 @@ const colors = {
     description: 'A versatile, modern grey in double-brushed microsuede that pairs effortlessly with any mood or style.',
     variantId: '50652104622400',
     fabric: 'Double-brushed Microsuede',
-    stock: 2,
+    stock: 10,
   },
   Navy: {
     hex: '#4A6B8A',
@@ -75,7 +75,7 @@ const colors = {
     description: 'A deep moss green inspired by forest trails and quiet hideouts. Earthy and elegant, Mossmelt brings the outdoors in — perfect for grounded play and peaceful lounging.',
     variantId: '50652104753472',
     fabric: 'Double-brushed Microsuede',
-    stock: 1,
+    stock: 10,
   },
   PastelBlue: {
     hex: '#C7DDE0',
